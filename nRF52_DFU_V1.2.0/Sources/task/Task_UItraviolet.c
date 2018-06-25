@@ -25,6 +25,7 @@
 #include "UI_win_notify.h"
 #include "ClockTick.h"
 #include "Task_Store.h"
+#include "Task_Flash.h"
 
 static nrf_saadc_value_t  saadc_buff[SAADC_BUFF_SISE];
 
@@ -180,14 +181,14 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         
         UIT_cm2[0] = v_to_cm2(UIT_vol);
         
-        #if 1
+        #if 0
         UIT_i[0] = cm_to_i(UIT_cm2[0]);
         #else
         
-        UIT_i += 1;
-        if ( UIT_i > 11 )
+        UIT_i[0] += 1;
+        if ( UIT_i[0] > 11 )
         {
-            UIT_i = 0;
+            UIT_i[0] = 0;
         }
         #endif
         
@@ -214,7 +215,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
             osal_set_event ( task_id, TASK_UIT_UPDATE_UV_EVT );
         }
         
-        if ( !(sampleCnt % 60) )           /* 3分钟保存1个,1次保存2个,6分钟1组 */
+        if ( !(sampleCnt % 30) )           /* 3分钟保存1个,1次保存2个,6分钟1组 */
         {
             if ( dataCnt == 0 )
             {
@@ -225,6 +226,15 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
                 dataCnt = 0;
                 osal_set_event ( taskStoreTaskId, TASK_STORE_SAVE_UVT_EVT ); 
             } 
+        }
+        
+        if ( !(sampleCnt % 60) )         /* 每个60分钟上报一次 */
+        {
+            local_tx[0] = 0x28;
+            local_tx[1] = 0x02;
+            local_tx[2] = fm.erea[FMC_ID_UIT].items & 0xFF;     
+
+            bt_protocol_tx( local_tx, sizeof(local_tx));            
         }
         
 		return ( events ^ TASK_UITRAVIOLET_START_EVT );
