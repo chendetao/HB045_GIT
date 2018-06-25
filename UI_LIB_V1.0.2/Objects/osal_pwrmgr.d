@@ -1,0 +1,14 @@
+.\objects\osal_pwrmgr.o: Sources\osal\src\OSAL_PwrMgr.c
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.15.0\Device\Include\nrf52.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm4.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmSimd.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.15.0\Device\Include\system_nrf52.h
+.\objects\osal_pwrmgr.o: .\Sources\osal\inc\OSAL_PwrMgr.h
+.\objects\osal_pwrmgr.o: .\Sources\osal\inc\OSAL.h
+.\objects\osal_pwrmgr.o: .\Sources\osal\inc\OSAL_Timer.h
+.\objects\osal_pwrmgr.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\osal_pwrmgr.o: .\Sources\drivers\FPU.h

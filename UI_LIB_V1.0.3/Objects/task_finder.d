@@ -1,0 +1,10 @@
+.\objects\task_finder.o: Sources\task\Task_Finder.c
+.\objects\task_finder.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\task_finder.o: .\Sources\osal\inc\OSAL.h
+.\objects\task_finder.o: .\Sources\osal\inc\OSAL_Timer.h
+.\objects\task_finder.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\task_finder.o: Sources\task\Task_Finder.h
+.\objects\task_finder.o: .\Sources\application\UserSetting.h
+.\objects\task_finder.o: .\Sources\application\btprotocol.h
+.\objects\task_finder.o: .\Sources\gui\Window.h
+.\objects\task_finder.o: .\Sources\gui\UI_win_notify.h

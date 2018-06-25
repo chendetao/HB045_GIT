@@ -1,0 +1,10 @@
+.\objects\fpu.o: Sources\drivers\FPU.c
+.\objects\fpu.o: Sources\drivers\FPU.h
+.\objects\fpu.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.15.0\Device\Include\nrf52.h
+.\objects\fpu.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm4.h
+.\objects\fpu.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\fpu.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h
+.\objects\fpu.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h
+.\objects\fpu.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h
+.\objects\fpu.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmSimd.h
+.\objects\fpu.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.15.0\Device\Include\system_nrf52.h
