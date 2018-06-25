@@ -353,6 +353,8 @@ void do_sync_frame( int from, int to )
 		}
 	}			
 	
+    
+    
 	#endif
 	
 	if ( lcd_enable_flag == 0 && from == 140 && to == 160 )

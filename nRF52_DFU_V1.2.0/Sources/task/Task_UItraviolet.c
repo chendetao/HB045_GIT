@@ -181,7 +181,7 @@ unsigned long taskUItraviolet( unsigned long task_id, unsigned long events )
         
         UIT_cm2[0] = v_to_cm2(UIT_vol);
         
-        #if 0
+        #if 1
         UIT_i[0] = cm_to_i(UIT_cm2[0]);
         #else
         
