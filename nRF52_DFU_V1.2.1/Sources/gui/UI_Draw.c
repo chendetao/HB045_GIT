@@ -100,8 +100,8 @@ void draw_bitmap_from_flash(int fx, int fy, int width, int height, unsigned long
 		{
 			if ( x < LCD_W && y < LCD_H )  {
                 
-                vh = spi_transfer(NRF_SPI0, 0xFF);
                 vl = spi_transfer(NRF_SPI0, 0xFF);
+                vh = spi_transfer(NRF_SPI0, 0xFF);
                 
 				rgb = ((unsigned short)vh<<8) | vl; 
 			

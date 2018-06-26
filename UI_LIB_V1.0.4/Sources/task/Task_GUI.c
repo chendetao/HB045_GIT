@@ -6,6 +6,7 @@
 #include "Window.h"
 
 #include "LCD_ST7735.h"
+#include "nrf_delay.h"
 #include "Button.h"
 #include "UI_win_notify.h"
 #include "F_Lib.h"

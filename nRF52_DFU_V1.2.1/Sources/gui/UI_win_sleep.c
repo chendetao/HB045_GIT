@@ -36,9 +36,11 @@ void show_sleep_timer(int x, int y, int deep_time,int light_time)
       vh ++;
     }
 	/** */
-	
+	#if 0
 	DrawUI_Bitmap(0,16,80,80,BMP_function_sleep,0XF81F,BMP_FUNCTION_SLEEP_RGB_B);	
-	
+	#else
+    draw_bitmap_from_flash( (80-64)/2, 16, 64, 64, 0x200000+0x4000);    
+    #endif
 	if ( (int)(vh) > 9 )
 	{
 		x = 0 + ((80-0)-3*11-11)/2;

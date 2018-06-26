@@ -428,11 +428,11 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\objects\arm_startup_nrf52.d -o.\objects\arm_startup_nrf52.o -
-IE:\BandAll\HB045\UI_LIB_V1.0.3\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS
-\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.15.0\
-Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION S
-ETA 517" --predefine="_RTE_ SETA 1" --predefine="NRF52 SETA 1" --list=.\listing
-s\arm_startup_nrf52.lst RTE\Device\nRF52832_xxAA\arm_startup_nrf52.s
+IE:\BandAll\HB045_GIT\UI_LIB_V1.0.4\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\C
+MSIS\Include -IC:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.1
+5.0\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSI
+ON SETA 517" --predefine="_RTE_ SETA 1" --predefine="NRF52 SETA 1" --list=.\lis
+tings\arm_startup_nrf52.lst RTE\Device\nRF52832_xxAA\arm_startup_nrf52.s
 
 
 

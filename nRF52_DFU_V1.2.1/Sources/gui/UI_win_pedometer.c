@@ -698,7 +698,7 @@ void show_pedometer(int x, int y, int counter )
 	DrawUI_Bitmap(48,61,32,16,bmp_steps_pedometer, 0x07EC,COLOR_B);
 	
 	draw_bitmap( 0, 90+6, 16, 16, gImage_distance);
-	draw_bitmap( 0, 126+6, 16, 16, gImage_calurie_ss);
+	draw_bitmap( 0, 126+4, 16, 16, gImage_calurie_ss);
 	
 	// show distance and calorie 
 

@@ -1521,27 +1521,35 @@ void show_demo(void)
     switch( flag__ )
     {
     case 0:        
-        draw_bitmap_from_flash( (80-72)/2, (160-48)/2, 72, 48, 0x200000+0x0000+0xf000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x0000);
         flag__ = 1;
         break;
     case 1:    
-        draw_bitmap_from_flash( (80-53)/2, (160-72)/2, 53, 72, 0x200000+0x2000+0xf000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x2000);
         flag__ = 2;
         break;
     case 2:    
-        draw_bitmap_from_flash( (80-53)/2, (160-72)/2, 53, 72, 0x200000+0x4000+0xf000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x4000);
         flag__ = 3;
         break;
     case 3:    
-        draw_bitmap_from_flash( (80-58)/2, (160-48)/2, 58, 48, 0x200000+0x6000+0xf000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x6000);
         flag__ = 4;
         break;
     case 4:    
-        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x8000+0xf000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0x8000);
         flag__ = 5;
         break;
     case 5:    
-        draw_bitmap_from_flash( (80-65)/2, (160-56)/2, 65, 56, 0x200000+0xf000+0xf000);
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xa000);
+        flag__ = 6; 
+        break;
+    case 6:    
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xc000);
+        flag__ = 7;
+        break;
+    case 7:    
+        draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xe000);
         flag__ = 0;    
         break;    
     }  
