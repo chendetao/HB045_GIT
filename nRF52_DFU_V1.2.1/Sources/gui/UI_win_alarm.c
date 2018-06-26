@@ -24,16 +24,16 @@
 void show_alarm(int x, int y, int hour, int minute )
 {	
     #if 0
-	DrawUI_Bitmap(0,16,80,80,BMP_function_alarm,BMP_FUNCTION_ALARM_RGB_F,BMP_FUNCTION_ALARM_RGB_B);	
+	DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_alarm,BMP_FUNCTION_ALARM_RGB_F);	
 	#else
     draw_bitmap_from_flash( (80-64)/2, 16, 64, 64, 0x200000+0x6000);    
     #endif
     
-	DrawUI_Bitmap(13,114,11,24,Font_11x24[hour/10], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap(24,114,11,24,Font_11x24[hour%10], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap(35,114,11,24,Font_11x24[11], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap(45,114,11,24,Font_11x24[minute/10], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap(56,114,11,24,Font_11x24[minute%10], COLOR_F,COLOR_B);	
+	DrawUI_Bitmap_Ex(13,114,11,24,Font_11x24[hour/10], COLOR_F);	
+	DrawUI_Bitmap_Ex(24,114,11,24,Font_11x24[hour%10], COLOR_F);	
+	DrawUI_Bitmap_Ex(35,114,11,24,Font_11x24[11], COLOR_F);	
+	DrawUI_Bitmap_Ex(45,114,11,24,Font_11x24[minute/10], COLOR_F);	
+	DrawUI_Bitmap_Ex(56,114,11,24,Font_11x24[minute%10], COLOR_F);	
 }
 
 unsigned long win_alarm_proc(unsigned long wid, unsigned long msg_type, 

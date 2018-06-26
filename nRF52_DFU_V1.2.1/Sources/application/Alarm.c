@@ -215,19 +215,3 @@ void alarm_reset(void)
 	memset(&alarm,0,sizeof(alarm));
 }
 
-int alarm_put( int id, int hour, int minute, int mode, int mode_val)
-{
-	
-	return 0;
-}
-
-int alarm_get( int id )
-{
-	return 0;
-}
-
-int alarm_remove(int id )
-{
-	return 0;
-}
-

@@ -3,6 +3,7 @@
 
 extern const unsigned char bmp_hr_1[];
 extern const unsigned char bmp_hr_2[]; 
+extern const unsigned char bmp_hr_hr[];
 
 #define BMP_FUNCTION_RUNNING_RGB_B 0x0000
 #define BMP_FUNCTION_RUNNING_RGB_F 0X06CE

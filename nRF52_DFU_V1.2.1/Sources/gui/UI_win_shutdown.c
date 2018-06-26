@@ -49,7 +49,11 @@ void shutdown_cb( int shutdown )
 
 void show_shutdown_icon(int x, int y )
 {	
-	DrawUI_Bitmap(0,(160-80)/2,80,80,BMP_function_shutdown,BMP_FUNCTION_SHUTDOWN_RGB_F,BMP_FUNCTION_SHUTDOWN_RGB_B);
+    #if 0
+	DrawUI_Bitmap_Ex(0,(160-80)/2,80,80,BMP_function_shutdown,BMP_FUNCTION_SHUTDOWN_RGB_F);
+    #else
+    draw_bitmap_from_flash( (80-64)/2, (160-64)/2, 64, 64, 0x200000+0xc000);    
+    #endif
 }
 
 unsigned long win_shutdown_proc(unsigned long wid, unsigned long msg_type, 

@@ -621,7 +621,7 @@ void ui_find_me_notify( int msg_id, unsigned long arg )
     memset(frame_buffer, 0, sizeof(frame_buffer));
     
 	if ( config.showFlag++ % 2 ){
-		DrawUI_Bitmap(0,(160-80)/2,80,80,BMP_phone,BMP_FUNCTION_FINDPHONE_RGB_F,BMP_FUNCTION_FINDPHONE_RGB_B);
+		DrawUI_Bitmap_Ex(0,(160-80)/2,80,80,BMP_phone,BMP_FUNCTION_FINDPHONE_RGB_F);
 	}
 	
     sync_frame();
@@ -636,7 +636,7 @@ void ui_ble_notify( int msg_id, unsigned long arg )
 
 	if ( config.showFlag++ & 0x1 )
 	{
-		DrawUI_Bitmap(8,(160-64)/2,64,64,BMP_ble, BMP_BLE_RGB_F,BMP_BLE_RGB_B);
+		DrawUI_Bitmap_Ex(8,(160-64)/2,64,64,BMP_ble, BMP_BLE_RGB_F);
 	}
 		
     sync_frame();
@@ -651,7 +651,7 @@ void ui_sedentary_notify( int msg_id, unsigned long arg )
 	
 	if ( config.showFlag++ & 0x1 )
 	{	
-		DrawUI_Bitmap(8,(160-64)/2,64,64,BMP_sedentary, BMP_SEDENTARY_RGB_F,BMP_SEDENTARY_RGB_B);
+		DrawUI_Bitmap_Ex(8,(160-64)/2,64,64,BMP_sedentary, BMP_SEDENTARY_RGB_F);
     }
 	
     sync_frame();

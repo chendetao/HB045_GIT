@@ -961,6 +961,11 @@
               <FileType>1</FileType>
               <FilePath>.\Sources\icon\UI_sport_icon.c</FilePath>
             </File>
+            <File>
+              <FileName>UI_Flash_Lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Sources\icon\UI_Flash_Lib.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

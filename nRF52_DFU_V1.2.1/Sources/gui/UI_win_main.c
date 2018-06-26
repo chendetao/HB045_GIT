@@ -293,7 +293,7 @@ void show_main_ui_style_0(void)
 }
 #else
 
-const unsigned char bmp_ble_[] = {0x04,0x01,0x88,0x00,0x50,0x00,0xFF,0x07,0x21,0x04,0x22,0x02,0x54,0x01,0x88,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};/*"F:\BandAll\HB021\彩屏niyajia\ble.BMP",0*/
+//const unsigned char bmp_ble_[] = {0x04,0x01,0x88,0x00,0x50,0x00,0xFF,0x07,0x21,0x04,0x22,0x02,0x54,0x01,0x88,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};/*"F:\BandAll\HB021\彩屏niyajia\ble.BMP",0*/
 //const unsigned char bmp_battery[][38] = /** 19x16 */
 //{
 //{0x00,0x00,0xF0,0x0F,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x70,0x0E,0xC0,0x03,0x00,0x00,0x00,0x00},/*"F:\Band\HB021\尼加亚彩屏_80x160\尼加亚彩屏_80x160\切图\主界面\battery\battery_level_0.BMP",0*/
@@ -301,6 +301,13 @@ const unsigned char bmp_ble_[] = {0x04,0x01,0x88,0x00,0x50,0x00,0xFF,0x07,0x21,0
 //{0x00,0x00,0xF0,0x0F,0x10,0x08,0xD0,0x0B,0xD0,0x0B,0xD0,0x0B,0x10,0x08,0xD0,0x0B,0xD0,0x0B,0xD0,0x0B,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x10,0x08,0x70,0x0E,0xC0,0x03,0x00,0x00,0x00,0x00},/*"F:\Band\HB021\尼加亚彩屏_80x160\尼加亚彩屏_80x160\切图\主界面\battery\battery_level_2.BMP",0*/
 //{0x00,0x00,0xF0,0x0F,0x10,0x08,0xD0,0x0B,0xD0,0x0B,0xD0,0x0B,0x10,0x08,0xD0,0x0B,0xD0,0x0B,0xD0,0x0B,0x10,0x08,0xD0,0x0B,0xD0,0x0B,0xD0,0x0B,0x10,0x08,0x70,0x0E,0xC0,0x03,0x00,0x00,0x00,0x00},/*"F:\Band\HB021\尼加亚彩屏_80x160\尼加亚彩屏_80x160\切图\主界面\battery\battery_level_3.BMP",0*/
 //};
+
+const unsigned char bmp_ble_[] = 
+
+{0x00,0x00,0x7C,0x00,0x82,0x00,0x92,0x00,0x92,0x00,0x92,0x00,0x10,0x00,0x10,0x00,0x92,0x00,0x92,0x00,0x92,0x00,0x82,0x00,0x7C,0x00,0x00,0x00,0x00,0x00,0x00,0x00};/*"E:\BandAll\HB045_GIT\UI\HB045图标调整_6.19\HB045图标调整_6.19\ble.BMP",0*/ 
+
+
+
 
 const unsigned char Font_9x16[][18] = 
 {
@@ -683,7 +690,7 @@ const unsigned char bmp_week_2[][3][12] =
 void DrawDateWeek__(int x, int y)
 {
 	// date
-	int h,m,i;
+	int h,i;
 	
 	h = TimerDD();
 	
@@ -728,9 +735,9 @@ void show_main_ui_style_0(void)
 	// 绘制蓝牙图标和电池图标
 	if ( ble.isConnected == 1 )
 	{
-		DrawUI_Bitmap_Ex(0,0,12,16,bmp_ble_,COLORREF(150,150,150));
+		DrawUI_Bitmap_Ex(0,0,16,16,bmp_ble_,COLORREF(160,160,160));
 	}else{
-		DrawUI_Bitmap_Ex(0,0,12,16,bmp_ble_,COLORREF(80,80,80));
+		DrawUI_Bitmap_Ex(0,0,16,16,bmp_ble_,COLORREF(60,60,60));
 	}
 	
 	draw_battery(60,1,COLORREF(150,150,150));	
@@ -800,7 +807,8 @@ void show_main_ui_style_0(void)
 	// 绘制分针和时针
 	float h_hour,h_minute,h_second;
 	
-	int x_hour, y_hour, x_minute, y_minute/*, x_second, y_second*/;
+	int x_hour, y_hour;
+//    int x_minute, y_minute/*, x_second, y_second*/;
 	int hour/*, minute*/, second;
 	
 	hour = TimerHH();
@@ -814,8 +822,8 @@ void show_main_ui_style_0(void)
 	/* x_second = (int)(32*sin(h_second));
 	y_second = (int)(32*cos(h_second)); */
 	
-	x_minute = (int)(26*sin(h_minute));
-	y_minute = (int)(26*cos(h_minute));
+//	x_minute = (int)(26*sin(h_minute));
+//	y_minute = (int)(26*cos(h_minute));
 	
 	x_hour = (int)(20*sin(h_hour));
 	y_hour = (int)(20*cos(h_hour));		
@@ -998,6 +1006,19 @@ int uit_get_level( int uit_level )
     }
 }
 
+const unsigned char bmp_ble_16x10[] = {0xFC,0x00,0xFE,0x01,0x87,0x03,0x03,0x03,0x33,0x03,0x33,0x03,0x33,0x03,0x30,0x00,0x30,0x00,0x33,0x03,0x33,0x03,0x33,0x03,0x03,0x03,0x87,0x03,0xFE,0x01,0xFC,0x00};/*"E:\BandAll\HB045_GIT\UI\HB045图标调整_6.19\HB045图标调整_6.19\bluetooth.bmp",0*/ 
+
+void UI_Draw_Title_Bluetooth_2(void)
+{
+	if ( ble.isConnected == 0 )
+	{		
+		DrawUI_Bitmap_Ex(42-2,3,16,16,bmp_ble_16x10,0xFFFF);
+	}else
+	{
+		DrawUI_Bitmap_Ex(42-2,3,16,16,bmp_ble_16x10,0x1F<<0);
+	}	
+}
+
 void show_uit_win( void)
 {
     #if 0
@@ -1052,7 +1073,8 @@ void show_uit_win( void)
     tmp %= 10;
     DrawUI_Bitmap_Ex(16+32,96,8,16, Font_8x16[tmp],0xFFFF);       
     #else
-    UI_Draw_Title_Bluetooth_(36,0);
+    // UI_Draw_Title_Bluetooth_(36,0);
+    UI_Draw_Title_Bluetooth_2();
     UI_Draw_Title();
     DrawUI_JPEG(0,8,ui_jpeg_uv);
     
@@ -1204,18 +1226,6 @@ const unsigned char *Temp_extent[] =
 	Cent,           //摄氏度
 };
 
-
-
-void UI_Draw_Title_Bluetooth_2(void)
-{
-	if ( ble.isConnected == 0 )
-	{		
-		DrawUI_Bitmap_Rever(42,0,12,16,bmp_bluetooth[0],0x1F<<0);
-	}else
-	{
-		DrawUI_Bitmap_Rever(42,0,12,16,bmp_bluetooth[1],0x1F<<0);
-	}	
-}
 void ui_weather(void)
 {
     int c_temp = fm.weather.ct & 0x7F;
@@ -1272,7 +1282,6 @@ void ui_weather(void)
 			DrawUI_Bitmap_Exx( (80-22*2-8)/2+22,65,22, 24, CurTemp_22x24[c_temp%10], 0x073F);
 			DrawUI_JPEG((80-22*2-8)/2+44, 65, Temp_unit);
 		}
-		
 	}
 	else
 	{
@@ -1293,17 +1302,21 @@ void ui_weather(void)
 	
 	}
     
-    // 分割线
-	//DrawUI_Bitmap_Exx( 15,96,50, 1, dissever, 0xFFFF);
-    for ( int x = 15; x < 65; x++ )
+    if ( (fm.weather.ht != 0xFF) && (fm.weather.lt != 0xFF) )
     {
-        set_pixel( x, 96, 0xFFFF);
-    }
+        // 分割线
 
+        for ( int x = 15; x < 65; x++ )
+        {
+            set_pixel( x, 96, 0xFFFF);
+        }
+    }
+    
     // 最高气温，最低气温.
 	
-	#if 1
-	if(h_temp >= 0 && l_temp >= 0)
+	if ( (fm.weather.ht != 0xFF) && (fm.weather.lt != 0xFF) )
+    {
+	if( h_temp >= 0 && l_temp >= 0 )
 	{
 		if(h_temp < 10)
 		{
@@ -1344,7 +1357,8 @@ void ui_weather(void)
 			}			
 		}
 	}
-	if(h_temp >= 0 && l_temp < 0)
+    
+	if ( h_temp >= 0 && l_temp < 0 )
 	{
 		l_temp *= -1;
 		if(h_temp < 10)
@@ -1390,7 +1404,8 @@ void ui_weather(void)
 			}				
 		}
 	}
-	if(h_temp < 0 && l_temp >= 0)
+    
+	if( h_temp < 0 && l_temp >= 0 )
 	{
 		h_temp *= -1;
 		if(h_temp < 10)
@@ -1488,9 +1503,11 @@ void ui_weather(void)
 			}				
 		}
 	}
-	#endif
-	//时间
-
+	
+    }
+	
+    // 时间
+    
     int hour = TimerHH();
 	if ( config.time_format == 1 )
 	{
@@ -1667,6 +1684,7 @@ unsigned long win_main_proc(unsigned long wid, unsigned long msg_type,
                     window_push(window_get(win_current));
                     msg_type |= WINDOW_DISTORY;
                     show_weath_flag = 0;
+                    config.ui_style = 0;
                 }
                 else 
                 {

@@ -22,22 +22,22 @@ void show_findphone_icon(int x, int y )
 	
 	if ( finder.isFound == 1 )
 	{
-		DrawUI_Bitmap(0,(160-80)/2,80,80,BMP_find_phone,COLOR_FIND_F,COLOR_FIND_B);
+		DrawUI_Bitmap_Ex(0,(160-80)/2,80,80,BMP_find_phone,COLOR_FIND_F );
 		return;
 	}
 	
 	if ( finder.state == FIND_PHONE_STATE_STOP )
 	{
-		DrawUI_Bitmap(0,(160-80)/2,80,80,BMP_find_phone,COLOR_FIND_F,COLOR_FIND_B);
+		DrawUI_Bitmap_Ex(0,(160-80)/2,80,80,BMP_find_phone,COLOR_FIND_F );
 	}else{
 		if ( showFlag == 0 ){
-			DrawUI_Bitmap(0,(160-80)/2-20,80,80,BMP_find_phone,COLOR_FIND_F,COLOR_FIND_B);
+			DrawUI_Bitmap_Ex(0,(160-80)/2-20,80,80,BMP_find_phone,COLOR_FIND_F );
 			showFlag = 1;
 		}else if ( showFlag == 1 ){
-			DrawUI_Bitmap(0,(160-80)/2,80,80,BMP_find_phone,COLOR_FIND_F,COLOR_FIND_B);		
+			DrawUI_Bitmap_Ex(0,(160-80)/2,80,80,BMP_find_phone,COLOR_FIND_F );		
 			showFlag = 2;
 		}else{
-			DrawUI_Bitmap(0,(160-80)/2+20,80,80,BMP_find_phone,COLOR_FIND_F,COLOR_FIND_B);
+			DrawUI_Bitmap_Ex(0,(160-80)/2+20,80,80,BMP_find_phone,COLOR_FIND_F);
 			showFlag = 0;
 		}
 	}

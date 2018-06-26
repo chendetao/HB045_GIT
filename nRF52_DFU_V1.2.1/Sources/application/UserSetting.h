@@ -45,7 +45,9 @@ typedef struct      /* 使用位域，是为了节约内存，结构统一 */
 	unsigned char gsensor_fast_enable;	
 	unsigned char showFlag;
 	unsigned char sync_flag;	
-
+	unsigned char motor_test_enable;
+    unsigned char app_all_enable;
+    
     unsigned long train_running_type;
     unsigned long train_running_utc;
     unsigned long train_running_pedometer;
@@ -59,8 +61,6 @@ typedef struct      /* 使用位域，是为了节约内存，结构统一 */
     unsigned long train_sw_pedometer;
     unsigned long train_sw_distance;
     unsigned long train_sw_calorie;    
-	unsigned char motor_test_enable;
-    unsigned char app_all_enable;
 }Configure_Typef;
 
 extern Configure_Typef config;
@@ -130,7 +130,7 @@ typedef struct{
 }BLE_Typdef;
 
 extern BLE_Typdef ble;
-extern unsigned long gsensor_ok;
+extern unsigned char gsensor_ok;
 extern unsigned char update_flag;
 extern unsigned char ancs_ancs_flag;
 

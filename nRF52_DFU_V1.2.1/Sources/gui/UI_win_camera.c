@@ -19,7 +19,7 @@ unsigned char exit_take_photo[20] =   {0xFC,0x19,0x80,0x00,0x00,0x00,};
 
 void show_camera( int x, int y )
 {
-	DrawUI_Bitmap( (80-64)/2,(160-64)/2, 64, 64, BMP_camera, COLOR_CAMERA_F, COLOR_CAMERA_B);
+	DrawUI_Bitmap_Ex( (80-64)/2,(160-64)/2, 64, 64, BMP_camera, COLOR_CAMERA_F);
 }
 
 unsigned long win_camera_proc(unsigned long wid, unsigned long msg_type, 

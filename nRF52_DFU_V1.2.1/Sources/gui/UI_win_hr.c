@@ -52,30 +52,30 @@ void Draw_Hr_Value( int x, int y, int val, int flag)
 	int idx = (val/100) % 10;
 	if ( idx == 1 )
 	{
-		DrawUI_Bitmap(x,y,4,24,Font_11x24[idx], COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(x,y,4,24,Font_11x24[idx], COLOR_F);
 		x += 4;
 	} else {
-		DrawUI_Bitmap(x,y,11,24,Font_11x24[idx], COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(x,y,11,24,Font_11x24[idx], COLOR_F);
 		x += 11;
 	}
 	
 	idx = (val/10) % 10;
 	if ( idx == 1 )
 	{
-		DrawUI_Bitmap(x,y,4,24,Font_11x24[idx], COLOR_F,COLOR_B);
-		x += 4;
+		DrawUI_Bitmap_Ex(x,y,4,24,Font_11x24[idx], COLOR_F);
+        x += 4;
 	} else {
-		DrawUI_Bitmap(x,y,11,24,Font_11x24[idx], COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(x,y,11,24,Font_11x24[idx], COLOR_F);
 		x += 11;
 	}
 
 	idx = val % 10;
 	if ( idx == 1 )
 	{
-		DrawUI_Bitmap(x,y,4,24,Font_11x24[idx], COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(x,y,4,24,Font_11x24[idx], COLOR_F);
 		x += 4;
 	} else {
-		DrawUI_Bitmap(x,y,11,24,Font_11x24[idx], COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(x,y,11,24,Font_11x24[idx], COLOR_F);
 		x += 11;
 	}	
 }
@@ -123,21 +123,21 @@ void ui_win_hr_done(void)
 	DrawUI_Bitmap(44,80, 7, 16,Font_7x16[hr.lp%10], COLOR_F,COLOR_B);
 	DrawUI_Bitmap(37,80, 7, 16,Font_7x16[hr.lp/10], COLOR_F,COLOR_B);
 	#else
-	DrawUI_Bitmap(51,80, 7, 16,Font_7x16[hr.hp%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(44,80, 7, 16,Font_7x16[(hr.hp/10)%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(37,80, 7, 16,Font_7x16[hr.hp/100], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(58,80, 7, 16,Font_7x16[12], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(72,80, 7, 16,Font_7x16[hr.lp%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(65,80, 7, 16,Font_7x16[hr.lp/10], COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex(51,80, 7, 16,Font_7x16[hr.hp%10], COLOR_F);
+	DrawUI_Bitmap_Ex(44,80, 7, 16,Font_7x16[(hr.hp/10)%10], COLOR_F);
+	DrawUI_Bitmap_Ex(37,80, 7, 16,Font_7x16[hr.hp/100], COLOR_F);
+	DrawUI_Bitmap_Ex(58,80, 7, 16,Font_7x16[12], COLOR_F);
+	DrawUI_Bitmap_Ex(72,80, 7, 16,Font_7x16[hr.lp%10], COLOR_F);
+	DrawUI_Bitmap_Ex(65,80, 7, 16,Font_7x16[hr.lp/10], COLOR_F);
 	#endif
 	
 	draw_bitmap( 80-32, 80+16, 32, 10, gImage_mmhg_hr);
 
-	DrawUI_Bitmap( 44, 130, 7, 16, Font_7x16[hr.sp_h/10], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap( 51, 130, 7, 16, Font_7x16[hr.sp_h%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap( 58, 130, 7, 16, Font_7x16[10], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap( 65, 130, 7, 16, Font_7x16[hr.sp_l], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap( 72, 130, 7, 16, Font_7x16[13], COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex( 44, 130, 7, 16, Font_7x16[hr.sp_h/10], COLOR_F);	
+	DrawUI_Bitmap_Ex( 51, 130, 7, 16, Font_7x16[hr.sp_h%10], COLOR_F);
+	DrawUI_Bitmap_Ex( 58, 130, 7, 16, Font_7x16[10], COLOR_F);	
+	DrawUI_Bitmap_Ex( 65, 130, 7, 16, Font_7x16[hr.sp_l], COLOR_F);	
+	DrawUI_Bitmap_Ex( 72, 130, 7, 16, Font_7x16[13], COLOR_F);
 }
 
 
@@ -157,21 +157,21 @@ void ui_win_hr_stop(void)
 	DrawUI_Bitmap(44,80, 7, 16,Font_7x16[hr.lp%10], COLOR_F,COLOR_B);
 	DrawUI_Bitmap(37,80, 7, 16,Font_7x16[hr.lp/10], COLOR_F,COLOR_B);
 	#else
-	DrawUI_Bitmap(51,80, 7, 16,Font_7x16[hr.hp%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(44,80, 7, 16,Font_7x16[(hr.hp/10)%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(37,80, 7, 16,Font_7x16[hr.hp/100], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(58,80, 7, 16,Font_7x16[12], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(72,80, 7, 16,Font_7x16[hr.lp%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap(65,80, 7, 16,Font_7x16[hr.lp/10], COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex(51,80, 7, 16,Font_7x16[hr.hp%10], COLOR_F);
+	DrawUI_Bitmap_Ex(44,80, 7, 16,Font_7x16[(hr.hp/10)%10], COLOR_F);
+	DrawUI_Bitmap_Ex(37,80, 7, 16,Font_7x16[hr.hp/100], COLOR_F);
+	DrawUI_Bitmap_Ex(58,80, 7, 16,Font_7x16[12], COLOR_F);
+	DrawUI_Bitmap_Ex(72,80, 7, 16,Font_7x16[hr.lp%10], COLOR_F);
+	DrawUI_Bitmap_Ex(65,80, 7, 16,Font_7x16[hr.lp/10], COLOR_F);
 	#endif
 	
 	draw_bitmap( 80-32, 80+16, 32, 10, gImage_mmhg_hr);
 
-	DrawUI_Bitmap( 44, 130, 7, 16, Font_7x16[hr.sp_h/10], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap( 51, 130, 7, 16, Font_7x16[hr.sp_h%10], COLOR_F,COLOR_B);
-	DrawUI_Bitmap( 58, 130, 7, 16, Font_7x16[10], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap( 65, 130, 7, 16, Font_7x16[hr.sp_l], COLOR_F,COLOR_B);	
-	DrawUI_Bitmap( 72, 130, 7, 16, Font_7x16[13], COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex( 44, 130, 7, 16, Font_7x16[hr.sp_h/10], COLOR_F);	
+	DrawUI_Bitmap_Ex( 51, 130, 7, 16, Font_7x16[hr.sp_h%10], COLOR_F);
+	DrawUI_Bitmap_Ex( 58, 130, 7, 16, Font_7x16[10], COLOR_F);	
+	DrawUI_Bitmap_Ex( 65, 130, 7, 16, Font_7x16[hr.sp_l], COLOR_F);	
+	DrawUI_Bitmap_Ex( 72, 130, 7, 16, Font_7x16[13], COLOR_F);
 }
 
 void ui_win_hr_error(void)

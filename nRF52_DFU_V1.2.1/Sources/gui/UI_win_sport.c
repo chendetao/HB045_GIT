@@ -39,20 +39,20 @@ void DrawSportTimer( int x, int y, int rtime)
 	
 	temp = (rtime/3600)%24;
 	
-	DrawUI_Bitmap( 0+8,140,8,16,Font_8x16[(temp/10)%10],COLOR_F,COLOR_B);
-	DrawUI_Bitmap( 8+8,140,8,16,Font_8x16[temp%10],COLOR_F,COLOR_B);
-	DrawUI_Bitmap(16+8,140,8,16,Font_8x16[11],COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex( 0+8,140,8,16,Font_8x16[(temp/10)%10],COLOR_F);
+	DrawUI_Bitmap_Ex( 8+8,140,8,16,Font_8x16[temp%10],COLOR_F);
+	DrawUI_Bitmap_Ex(16+8,140,8,16,Font_8x16[11],COLOR_F);
 	
 	temp = (rtime/60)%60;
 	
-	DrawUI_Bitmap(24+8,140,8,16,Font_8x16[(temp/10)%10],COLOR_F,COLOR_B);
-	DrawUI_Bitmap(32+8,140,8,16,Font_8x16[temp%10],COLOR_F,COLOR_B);	
-	DrawUI_Bitmap(40+8,140,8,16,Font_8x16[11],COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex(24+8,140,8,16,Font_8x16[(temp/10)%10],COLOR_F);
+	DrawUI_Bitmap_Ex(32+8,140,8,16,Font_8x16[temp%10],COLOR_F);	
+	DrawUI_Bitmap_Ex(40+8,140,8,16,Font_8x16[11],COLOR_F);
 	
     temp = rtime % 60;
     
-    DrawUI_Bitmap(48+8,140,8,16,Font_8x16[(temp/10)%10],COLOR_F,COLOR_B);
-	DrawUI_Bitmap(56+8,140,8,16,Font_8x16[temp%10],COLOR_F,COLOR_B);
+    DrawUI_Bitmap_Ex(48+8,140,8,16,Font_8x16[(temp/10)%10],COLOR_F);
+	DrawUI_Bitmap_Ex(56+8,140,8,16,Font_8x16[temp%10],COLOR_F);
 }
 
 void DrawCaloriesValue( int x, int y, int value )
@@ -76,7 +76,7 @@ void DrawCaloriesValue( int x, int y, int value )
     int ex = sx + width - 8;
     do
     {
-      DrawUI_Bitmap(ex, y, 8, 16, Font_8x16_Other[value%10],COLOR_F,COLOR_B);	
+      DrawUI_Bitmap_Ex(ex, y, 8, 16, Font_8x16_Other[value%10],COLOR_F);	
       value /= 10;
       ex -= 8;  
     }while( value > 0 );  
@@ -86,14 +86,14 @@ void DrawSportIconBycle(void)
 {	
 	if ( sport_stat == 0 )
 	{
-		DrawUI_Bitmap(0,16,80,80,BMP_function_bycle,BMP_FUNCTION_BYCLE_RGB_F,BMP_FUNCTION_BYCLE_RGB_B);		
+		DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_bycle,BMP_FUNCTION_BYCLE_RGB_F);		
 		
-		DrawUI_Bitmap(28,128,24,24,bmp_start, COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(28,128,24,24,bmp_start, COLOR_F);
 	}else{
-		DrawUI_Bitmap(0,16,80,80,BMP_function_bycle,BMP_FUNCTION_BYCLE_RGB_F,BMP_FUNCTION_BYCLE_RGB_B);			
+		DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_bycle,BMP_FUNCTION_BYCLE_RGB_F);			
 		
-		DrawUI_Bitmap(0, 112, 16, 16, bmp_caluire,COLOR_F,COLOR_B);    // val
-		DrawUI_Bitmap(56, 112, 24, 16, bmp_kc,COLOR_F,COLOR_B);      // ICON
+		DrawUI_Bitmap_Ex(0, 112, 16, 16, bmp_caluire,COLOR_F);    // val
+		DrawUI_Bitmap_Ex(56, 112, 24, 16, bmp_kc,COLOR_F);      // ICON
 
 		DrawCaloriesValue(16,112, pedometer.calorie - config.train_bycle_calorie);
 		
@@ -105,15 +105,15 @@ void DrawSportIconRunning(void)
 {
 	if ( sport_stat == 0 )
 	{
-		DrawUI_Bitmap(0,16,80,80,BMP_function_running,BMP_FUNCTION_RUNNING_RGB_F,BMP_FUNCTION_RUNNING_RGB_B);	
+		DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_running,BMP_FUNCTION_RUNNING_RGB_F);	
 		
-		DrawUI_Bitmap(28,128,24,24,bmp_start, COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(28,128,24,24,bmp_start, COLOR_F);
 	}else{
 		
-		DrawUI_Bitmap(0,16,80,80,BMP_function_running,BMP_FUNCTION_RUNNING_RGB_F,BMP_FUNCTION_RUNNING_RGB_B);	
+		DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_running,BMP_FUNCTION_RUNNING_RGB_F);	
 		
-		DrawUI_Bitmap(0, 112, 16, 16, bmp_caluire,COLOR_F,COLOR_B);    // val
-		DrawUI_Bitmap(56, 112, 24, 16, bmp_kc,COLOR_F,COLOR_B);      // ICON
+		DrawUI_Bitmap_Ex(0, 112, 16, 16, bmp_caluire,COLOR_F);    // val
+		DrawUI_Bitmap_Ex(56, 112, 24, 16, bmp_kc,COLOR_F);      // ICON
 
 		DrawCaloriesValue(16,112,pedometer.calorie - config.train_running_calorie);		
 		
@@ -125,15 +125,15 @@ void DrawSportIconSwiming(void)
 {
 	if ( sport_stat == 0 )
 	{
-		DrawUI_Bitmap((80-68)/2,16+16,68,48,bmp_function_swiming_b,BMP_FUNCTION_RUNNING_RGB_F,0x0000);	
+		DrawUI_Bitmap_Ex((80-68)/2,16+16,68,48,bmp_function_swiming_b,BMP_FUNCTION_RUNNING_RGB_F);	
 		
-		DrawUI_Bitmap(28,128,24,24,bmp_start, COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex(28,128,24,24,bmp_start, COLOR_F);
 	}else{
 		
-		DrawUI_Bitmap((80-54)/2,16+20,54,40,bmp_function_swiming_s,BMP_FUNCTION_RUNNING_RGB_F,BMP_FUNCTION_RUNNING_RGB_B);	
+		DrawUI_Bitmap_Ex((80-54)/2,16+20,54,40,bmp_function_swiming_s,BMP_FUNCTION_RUNNING_RGB_F);	
 		
-		DrawUI_Bitmap(0, 112, 16, 16, bmp_caluire,COLOR_F,COLOR_B);    // val
-		DrawUI_Bitmap(56, 112, 24, 16, bmp_kc,COLOR_F,COLOR_B);      // ICON
+		DrawUI_Bitmap_Ex(0, 112, 16, 16, bmp_caluire,COLOR_F);    // val
+		DrawUI_Bitmap_Ex(56, 112, 24, 16, bmp_kc,COLOR_F);      // ICON
 
 		DrawCaloriesValue(16,112,pedometer.calorie - config.train_sw_calorie);		
 		
@@ -143,8 +143,8 @@ void DrawSportIconSwiming(void)
 
 void DrawSportIconBack(void)
 {
-	DrawUI_Bitmap(0,16,80,80,BMP_function_back, BMP_FUNCTION_BACK_RGB_F,BMP_FUNCTION_BACK_RGB_B);	
-	DrawUI_Bitmap(11,128,58,24,BMP_str_back, COLOR_F,COLOR_B);	
+	DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_back, BMP_FUNCTION_BACK_RGB_F);	
+	DrawUI_Bitmap_Ex(11,128,58,24,BMP_str_back, COLOR_F);	
 }
 
 void ui_win_sport(void)

@@ -37,23 +37,23 @@ void show_sleep_timer(int x, int y, int deep_time,int light_time)
     }
 	/** */
 	#if 0
-	DrawUI_Bitmap(0,16,80,80,BMP_function_sleep,0XF81F,BMP_FUNCTION_SLEEP_RGB_B);	
+	DrawUI_Bitmap_Ex(0,16,80,80,BMP_function_sleep,0XF81F);	
 	#else
     draw_bitmap_from_flash( (80-64)/2, 16, 64, 64, 0x200000+0x4000);    
     #endif
 	if ( (int)(vh) > 9 )
 	{
 		x = 0 + ((80-0)-3*11-11)/2;
-		DrawUI_Bitmap( x, 112, 11,24,Font_11x24[(vh/10)%10], COLOR_F,COLOR_B);
+		DrawUI_Bitmap_Ex( x, 112, 11,24,Font_11x24[(vh/10)%10], COLOR_F);
 		x += 8;
 	}else{
 		x = 0 + ((80-0)-2*11-3)/2;
 	}	
-	DrawUI_Bitmap( x, 112, 11,24, Font_11x24[vh%10], COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex( x, 112, 11,24, Font_11x24[vh%10], COLOR_F);
 	x += 11;
-	DrawUI_Bitmap( x, 112, 11,24, Font_11x24[10], COLOR_F,COLOR_B);
+	DrawUI_Bitmap_Ex( x, 112, 11,24, Font_11x24[10], COLOR_F);
 	x += 11;
-	DrawUI_Bitmap( x+1, 112, 11,24, Font_11x24[vl%10], COLOR_F,COLOR_B);		
+	DrawUI_Bitmap_Ex( x+1, 112, 11,24, Font_11x24[vl%10], COLOR_F);		
 }
 
 unsigned long win_sleep_proc(unsigned long wid, unsigned long msg_type, 

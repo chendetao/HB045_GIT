@@ -19,7 +19,7 @@ Configure_Typef config = {
 	.lcd_level_r = LCD_LEVEL_R,
 	.lcd_level_g = LCD_LEVEL_G,
 	.lcd_level_b = LCD_LEVEL_B,
-	.ui_style = 2,
+	.ui_style = 0,
 	.sync_flag = 0,	
 	.enable = 1,
 	.hflag = 0,
@@ -60,10 +60,9 @@ BLE_Typdef ble = {
 	.ancs_notify_enable = 0,
 };
 
-unsigned long gsensor_ok = 0;
+unsigned char gsensor_ok = 0;
 unsigned char test_lock = 0;
 unsigned char hr_ok = 0;
 unsigned char update_flag;
-
 unsigned char ancs_ancs_flag;
 
