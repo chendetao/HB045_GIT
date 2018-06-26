@@ -19,7 +19,7 @@ extern const unsigned char Font_7x9[][126];
 extern const unsigned char battery_level_icon[][320];
 extern const unsigned char gImage_bluetooth[360];
 
-extern const unsigned char gImage_running[1456];
+extern const unsigned char gImage_running[880];
 extern const unsigned char gImage_calurie[1456];
 extern const unsigned char gImage_heartrate[1456];
 

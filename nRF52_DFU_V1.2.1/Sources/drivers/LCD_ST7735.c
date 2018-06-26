@@ -7,7 +7,7 @@
 #include "OSAL.h"
 
 
-#define NEW_LCD_USED 0
+#define NEW_LCD_USED 1
 
 unsigned short frame_buffer[160][80];
 unsigned char lcd_enable_flag = 0;
