@@ -8,5 +8,9 @@ nRF52_DFU_V1.1.1/nRF52_DFU.uvguix.Think
 nRF52_DFU_V1.2.0/nRF52_DFU.uvguix.Administrator
 nRF52_DFU_V1.2.0/nRF52_DFU.uvguix.jacky
 nRF52_DFU_V1.2.0/nRF52_DFU.uvguix.Think
+Objects
+nRF52_DFU.uvguix.Administrator
+nRF52_DFU.uvguix.Think
+nRF52_DFU.uvguix.jacky
 *.TMP
-nRF52_DFU_V1.2.0/JLinkLog.txt
+JLinkLog.txt
