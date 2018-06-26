@@ -1,0 +1,1222 @@
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.covert_int2str) refers to main.o(.constdata) for hex
+    main.o(i.main) refers to osal_timer.o(i.osalTimerInit) for osalTimerInit
+    main.o(i.main) refers to osal_task.o(i.osal_init_tasks) for osal_init_tasks
+    main.o(i.main) refers to osal.o(i.osal_start_system) for osal_start_system
+    main.o(i.main) refers to osal.o(i.osal_run_system) for osal_run_system
+    osal.o(i.osal_clear_event) refers to osal.o(i.__Myget_PRIMASK) for __Myget_PRIMASK
+    osal.o(i.osal_clear_event) refers to osal.o(i.__Myset_PRIMASK) for __Myset_PRIMASK
+    osal.o(i.osal_clear_event) refers to osal_task.o(.constdata) for tasksCnt
+    osal.o(i.osal_clear_event) refers to osal_task.o(.bss) for taskEventsTable
+    osal.o(i.osal_run_system) refers to osal.o(i.__Myget_PRIMASK) for __Myget_PRIMASK
+    osal.o(i.osal_run_system) refers to osal.o(i.__Myset_PRIMASK) for __Myset_PRIMASK
+    osal.o(i.osal_run_system) refers to osal_pwrmgr.o(i.osal_pwrmgr_powerconserve) for osal_pwrmgr_powerconserve
+    osal.o(i.osal_run_system) refers to osal_task.o(.bss) for taskEventsTable
+    osal.o(i.osal_run_system) refers to osal_task.o(.constdata) for tasksCnt
+    osal.o(i.osal_run_system) refers to osal.o(.data) for sleepEnable
+    osal.o(i.osal_set_event) refers to osal.o(i.__Myget_PRIMASK) for __Myget_PRIMASK
+    osal.o(i.osal_set_event) refers to osal.o(i.__Myset_PRIMASK) for __Myset_PRIMASK
+    osal.o(i.osal_set_event) refers to osal_task.o(.constdata) for tasksCnt
+    osal.o(i.osal_set_event) refers to osal_task.o(.bss) for taskEventsTable
+    osal.o(i.osal_start_system) refers to osal_timer.o(i.osal_timer_start) for osal_timer_start
+    osal_task.o(i.osal_init_tasks) refers to task_touch.o(i.taskTouchInit) for taskTouchInit
+    osal_task.o(i.osal_init_tasks) refers to task_gui.o(i.taskGUIInit) for taskGUIInit
+    osal_task.o(i.osal_init_tasks) refers to task_frame.o(i.taskFrameInit) for taskFrameInit
+    osal_task.o(i.osal_init_tasks) refers to task_motor.o(i.taskMotorInit) for taskMotorInit
+    osal_task.o(i.osal_init_tasks) refers to osal_task.o(.bss) for taskEventsTable
+    osal_task.o(.constdata) refers to task_touch.o(i.taskTouch) for taskTouch
+    osal_task.o(.constdata) refers to task_gui.o(i.taskGUI) for taskGUI
+    osal_task.o(.constdata) refers to task_frame.o(i.taskFrame) for taskFrame
+    osal_task.o(.constdata) refers to task_motor.o(i.taskMotor) for taskMotor
+    osal_timer.o(i.RTC1_IRQHandler) refers to clocktick.o(i.system_clock_click) for system_clock_click
+    osal_timer.o(i.RTC1_IRQHandler) refers to osal_timer.o(i.osal_timer_isr) for osal_timer_isr
+    osal_timer.o(i.RTC1_IRQHandler) refers to osal_timer.o(.data) for systemTick
+    osal_timer.o(i.RTC2_IRQHandler) refers to osal_timer.o(.data) for hr_mticks
+    osal_timer.o(i.hr_clock_rtc_init) refers to osal_timer.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    osal_timer.o(i.hr_clock_rtc_init) refers to osal_timer.o(.emb_text) for __asm___12_OSAL_Timer_c_timer__nrf_delay_us
+    osal_timer.o(i.hr_clock_rtc_init) refers to osal_timer.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    osal_timer.o(i.hr_clock_rtc_init) refers to osal_timer.o(i.NVIC_ClearPendingIRQ) for NVIC_ClearPendingIRQ
+    osal_timer.o(i.hr_clock_rtc_init) refers to osal_timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    osal_timer.o(i.hr_clock_rtc_start) refers to osal_timer.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    osal_timer.o(i.hr_clock_rtc_start) refers to osal_timer.o(i.NVIC_ClearPendingIRQ) for NVIC_ClearPendingIRQ
+    osal_timer.o(i.hr_clock_rtc_start) refers to osal_timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    osal_timer.o(i.hr_clock_rtc_stop) refers to osal_timer.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    osal_timer.o(i.hr_clock_rtc_stop) refers to osal_timer.o(.emb_text) for __asm___12_OSAL_Timer_c_timer__nrf_delay_us
+    osal_timer.o(i.osalTimerInit) refers to memseta.o(.text) for __aeabi_memclr4
+    osal_timer.o(i.osalTimerInit) refers to osal_timer.o(.data) for osal_systemClock
+    osal_timer.o(i.osalTimerInit) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_create_timer) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_release_timer) refers to memseta.o(.text) for __aeabi_memclr4
+    osal_timer.o(i.osal_release_timer) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_start_timer) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_start_timerEx) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_stop_timer) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_stop_timerEx) refers to memseta.o(.text) for __aeabi_memclr4
+    osal_timer.o(i.osal_stop_timerEx) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_timer_disable) refers to osal_timer.o(i.platform_clock_stop) for platform_clock_stop
+    osal_timer.o(i.osal_timer_isr) refers to memseta.o(.text) for __aeabi_memclr4
+    osal_timer.o(i.osal_timer_isr) refers to osal_timer.o(.bss) for timer
+    osal_timer.o(i.osal_timer_isr) refers to osal_task.o(.bss) for taskEventsTable
+    osal_timer.o(i.osal_timer_isr) refers to osal_timer.o(.data) for osal_systemClock
+    osal_timer.o(i.osal_timer_start) refers to osal_timer.o(i.platform_clock_init) for platform_clock_init
+    osal_timer.o(i.osal_timer_start) refers to osal_timer.o(i.platform_clock_start) for platform_clock_start
+    osal_timer.o(i.platform_clock_init) refers to osal_timer.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    osal_timer.o(i.platform_clock_init) refers to osal_timer.o(.emb_text) for __asm___12_OSAL_Timer_c_timer__nrf_delay_us
+    osal_timer.o(i.platform_clock_init) refers to osal_timer.o(i.NVIC_SetPriority) for NVIC_SetPriority
+    osal_timer.o(i.platform_clock_init) refers to osal_timer.o(i.NVIC_ClearPendingIRQ) for NVIC_ClearPendingIRQ
+    osal_timer.o(i.platform_clock_init) refers to osal_timer.o(i.NVIC_EnableIRQ) for NVIC_EnableIRQ
+    osal_timer.o(i.platform_clock_stop) refers to osal_timer.o(i.NVIC_DisableIRQ) for NVIC_DisableIRQ
+    osal_timer.o(i.platform_clock_stop) refers to osal_timer.o(.emb_text) for __asm___12_OSAL_Timer_c_timer__nrf_delay_us
+    task_motor.o(i.motor_disable) refers to task_motor.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    task_motor.o(i.taskMotorInit) refers to task_motor.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    task_motor.o(i.taskMotorInit) refers to task_motor.o(.data) for taskMotorTaskId
+    task_gui.o(i.font_is_ok) refers to f_lib.o(i.ExitDeepSleepMode) for ExitDeepSleepMode
+    task_gui.o(i.font_is_ok) refers to nrf_delay.o(i.nrf_delay_ms) for nrf_delay_ms
+    task_gui.o(i.font_is_ok) refers to hfma2ylib.o(i.U2G) for U2G
+    task_gui.o(i.taskGUI) refers to osal.o(i.osal_set_event) for osal_set_event
+    task_gui.o(i.taskGUI) refers to lcd_st7735.o(i.LCD_Config_Delay) for LCD_Config_Delay
+    task_gui.o(i.taskGUI) refers to task_gui.o(i.nrf_gpio_cfg) for nrf_gpio_cfg
+    task_gui.o(i.taskGUI) refers to task_gui.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    task_gui.o(i.taskGUI) refers to task_gui.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    task_gui.o(i.taskGUI) refers to button.o(i.button_init) for button_init
+    task_gui.o(i.taskGUI) refers to lcd_st7735.o(i.LCD_Init) for LCD_Init
+    task_gui.o(i.taskGUI) refers to f_lib.o(i.font_init) for font_init
+    task_gui.o(i.taskGUI) refers to f_lib.o(i.EntryDeepSleepMode) for EntryDeepSleepMode
+    task_gui.o(i.taskGUI) refers to osal_timer.o(i.osal_start_timerEx) for osal_start_timerEx
+    task_gui.o(i.taskGUI) refers to task_gui.o(i.font_is_ok) for font_is_ok
+    task_gui.o(i.taskGUI) refers to f_lib.o(i.EraseSector) for EraseSector
+    task_gui.o(i.taskGUI) refers to f_lib.o(i.CheckStatus) for CheckStatus
+    task_gui.o(i.taskGUI) refers to memcpya.o(.text) for __aeabi_memcpy
+    task_gui.o(i.taskGUI) refers to f_lib.o(i.WritePage) for WritePage
+    task_gui.o(i.taskGUI) refers to memseta.o(.text) for __aeabi_memclr4
+    task_gui.o(i.taskGUI) refers to f_lib.o(i.ReadPage) for ReadPage
+    task_gui.o(i.taskGUI) refers to window.o(.data) for win_current
+    task_gui.o(i.taskGUI) refers to task_gui.o(.data) for erase_All_page
+    task_gui.o(i.taskGUI) refers to ui_lib.o(.constdata) for flash_ui
+    task_gui.o(i.taskGUI) refers to task_gui.o(.bss) for buf
+    task_gui.o(i.taskGUIInit) refers to window.o(i.window_init) for window_init
+    task_gui.o(i.taskGUIInit) refers to osal_timer.o(i.osal_start_timerEx) for osal_start_timerEx
+    task_gui.o(i.taskGUIInit) refers to task_gui.o(.data) for taskGUITaskId
+    task_touch.o(i.taskTouch) refers to task_touch.o(i.nrf_gpio_pin_read) for nrf_gpio_pin_read
+    task_touch.o(i.taskTouch) refers to osal.o(i.osal_set_event) for osal_set_event
+    task_touch.o(i.taskTouch) refers to osal_timer.o(i.osal_start_timerEx) for osal_start_timerEx
+    task_touch.o(i.taskTouch) refers to task_touch.o(.data) for counter
+    task_touch.o(i.taskTouch) refers to window.o(.data) for win_ticks
+    task_touch.o(i.taskTouch) refers to task_gui.o(.data) for taskGUITaskId
+    task_touch.o(i.taskTouchInit) refers to task_touch.o(.data) for taskTouchTaskId
+    task_frame.o(i.taskFrame) refers to lcd_st7735.o(i.do_sync_frame) for do_sync_frame
+    task_frame.o(i.taskFrameInit) refers to task_frame.o(.data) for taskFrameTaskId
+    nrf_delay.o(i.nrf_delay_ms) refers to nrf_delay.o(.emb_text) for __asm___11_nrf_delay_c_532987f3__nrf_delay_us
+    irqhandler.o(i.GPIOTE_IRQHandler) refers to osal.o(i.osal_set_event) for osal_set_event
+    irqhandler.o(i.GPIOTE_IRQHandler) refers to irqhandler.o(.data) for taskStepInterrutCount
+    irqhandler.o(i.GPIOTE_IRQHandler) refers to task_touch.o(.data) for taskTouchTaskId
+    spi_hw.o(i.spi_read_byte) refers to spi_hw.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    spi_hw.o(i.spi_read_byte) refers to spi_hw.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    lcd_st7735.o(i.Address_set) refers to lcd_st7735.o(i.WriteComm) for WriteComm
+    lcd_st7735.o(i.Address_set) refers to lcd_st7735.o(i.WriteData) for WriteData
+    lcd_st7735.o(i.LCD_Config) refers to lcd_st7735.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    lcd_st7735.o(i.LCD_Config) refers to nrf_delay.o(i.nrf_delay_ms) for nrf_delay_ms
+    lcd_st7735.o(i.LCD_Config) refers to lcd_st7735.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    lcd_st7735.o(i.LCD_Config) refers to lcd_st7735.o(i.WriteComm) for WriteComm
+    lcd_st7735.o(i.LCD_Config) refers to lcd_st7735.o(i.WriteData) for WriteData
+    lcd_st7735.o(i.LCD_Config) refers to lcd_st7735.o(i.LCD_Clear) for LCD_Clear
+    lcd_st7735.o(i.LCD_Config_Delay) refers to lcd_st7735.o(i.LCD_Config) for LCD_Config
+    lcd_st7735.o(i.LCD_Config_Delay) refers to usersetting.o(.data) for config
+    lcd_st7735.o(i.LCD_Init) refers to lcd_st7735.o(i.LCD_SPI_Init) for LCD_SPI_Init
+    lcd_st7735.o(i.LCD_Init) refers to lcd_st7735.o(i.LCD_Config) for LCD_Config
+    lcd_st7735.o(i.LCD_SPI_Init) refers to lcd_st7735.o(i.nrf_gpio_cfg) for nrf_gpio_cfg
+    lcd_st7735.o(i.LCD_SPI_Init) refers to lcd_st7735.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    lcd_st7735.o(i.LCD_SPI_Init) refers to lcd_st7735.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    lcd_st7735.o(i.WriteComm) refers to lcd_st7735.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    lcd_st7735.o(i.WriteComm) refers to lcd_st7735.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    lcd_st7735.o(i.WriteData) refers to lcd_st7735.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    lcd_st7735.o(i.WriteData) refers to lcd_st7735.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    lcd_st7735.o(i.do_sync_frame) refers to lcd_st7735.o(i.WriteComm) for WriteComm
+    lcd_st7735.o(i.do_sync_frame) refers to lcd_st7735.o(i.WriteData) for WriteData
+    lcd_st7735.o(i.do_sync_frame) refers to lcd_st7735.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    lcd_st7735.o(i.do_sync_frame) refers to lcd_st7735.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    lcd_st7735.o(i.do_sync_frame) refers to usersetting.o(.data) for config
+    lcd_st7735.o(i.do_sync_frame) refers to lcd_st7735.o(.bss) for frame_buffer
+    lcd_st7735.o(i.do_sync_frame) refers to lcd_st7735.o(.data) for lcd_enable_flag
+    lcd_st7735.o(i.lcd_display) refers to lcd_st7735.o(i.WriteComm) for WriteComm
+    lcd_st7735.o(i.lcd_display) refers to lcd_st7735.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    lcd_st7735.o(i.lcd_display) refers to lcd_st7735.o(i.nrf_gpio_cfg_default) for nrf_gpio_cfg_default
+    lcd_st7735.o(i.lcd_display) refers to lcd_st7735.o(i.LCD_SPI_Init) for LCD_SPI_Init
+    lcd_st7735.o(i.lcd_display) refers to lcd_st7735.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    lcd_st7735.o(i.lcd_display) refers to osal.o(i.osal_set_event) for osal_set_event
+    lcd_st7735.o(i.lcd_display) refers to usersetting.o(.data) for config
+    lcd_st7735.o(i.lcd_display) refers to lcd_st7735.o(.data) for lcd_enable_flag
+    lcd_st7735.o(i.lcd_display) refers to task_gui.o(.data) for taskGUITaskId
+    lcd_st7735.o(i.nrf_gpio_cfg_default) refers to lcd_st7735.o(i.nrf_gpio_cfg) for nrf_gpio_cfg
+    lcd_st7735.o(i.sync_frame) refers to osal.o(i.osal_set_event) for osal_set_event
+    lcd_st7735.o(i.sync_frame) refers to task_frame.o(.data) for taskFrameTaskId
+    f_lib.o(i.CheckStatus) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.CheckStatus) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.CheckStatus) refers to spi_hw.o(i.spi_read_byte) for spi_read_byte
+    f_lib.o(i.CheckStatus) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.CheckStatus) refers to f_lib.o(.data) for busy_cnt
+    f_lib.o(i.EntryDeepSleepMode) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.EntryDeepSleepMode) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.EntryDeepSleepMode) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.EraseSector) refers to f_lib.o(i.WriteEnable) for WriteEnable
+    f_lib.o(i.EraseSector) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.EraseSector) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.EraseSector) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.EraseSector) refers to f_lib.o(i.WriteDisable) for WriteDisable
+    f_lib.o(i.ExitDeepSleepMode) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.ExitDeepSleepMode) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.ExitDeepSleepMode) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.ReadPage) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.ReadPage) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.ReadPage) refers to spi_hw.o(i.spi_read_byte) for spi_read_byte
+    f_lib.o(i.ReadPage) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.WriteDisable) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.WriteDisable) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.WriteDisable) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.WriteEnable) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.WriteEnable) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.WriteEnable) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.WritePage) refers to f_lib.o(i.WriteEnable) for WriteEnable
+    f_lib.o(i.WritePage) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.WritePage) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.WritePage) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.WritePage) refers to f_lib.o(i.WriteDisable) for WriteDisable
+    f_lib.o(i.font_init) refers to f_lib.o(i.nrf_gpio_cfg) for nrf_gpio_cfg
+    f_lib.o(i.font_init) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    f_lib.o(i.r_dat_bat) refers to f_lib.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+    f_lib.o(i.r_dat_bat) refers to spi_hw.o(i.spi_write_byte) for spi_write_byte
+    f_lib.o(i.r_dat_bat) refers to spi_hw.o(i.spi_read_byte) for spi_read_byte
+    f_lib.o(i.r_dat_bat) refers to f_lib.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    ui_win_main.o(i.UI_Draw_Buttom) refers to ui_draw.o(i.DrawUI_Bitmap_Ex) for DrawUI_Bitmap_Ex
+    ui_win_main.o(i.UI_Draw_Buttom) refers to ui_main_icon.o(.constdata) for bmp_select
+    ui_win_main.o(i.UI_Draw_Buttom) refers to ui_win_main.o(.constdata) for p
+    ui_win_main.o(i.UI_Draw_Picture) refers to ui_draw.o(i.draw_bitmap) for draw_bitmap
+    ui_win_main.o(i.show_test_ui) refers to ui_draw.o(i.DrawUI_Bitmap) for DrawUI_Bitmap
+    ui_win_main.o(i.show_test_ui) refers to task_gui.o(.data) for font_ok
+    ui_win_main.o(i.show_test_ui) refers to osal_timer.o(.data) for osal_systemClock
+    ui_win_main.o(i.show_test_ui) refers to ui_win_main.o(.constdata) for Font_Info
+    ui_win_main.o(i.ui_show_val) refers to ui_draw.o(i.draw_bitmap) for draw_bitmap
+    ui_win_main.o(i.win_main_proc) refers to osal.o(i.osal_set_event) for osal_set_event
+    ui_win_main.o(i.win_main_proc) refers to lcd_st7735.o(i.lcd_display) for lcd_display
+    ui_win_main.o(i.win_main_proc) refers to memseta.o(.text) for __aeabi_memclr
+    ui_win_main.o(i.win_main_proc) refers to ui_win_main.o(i.show_test_ui) for show_test_ui
+    ui_win_main.o(i.win_main_proc) refers to lcd_st7735.o(i.sync_frame) for sync_frame
+    ui_win_main.o(i.win_main_proc) refers to osal_timer.o(i.osal_start_timerEx) for osal_start_timerEx
+    ui_win_main.o(i.win_main_proc) refers to window.o(i.window_push) for window_push
+    ui_win_main.o(i.win_main_proc) refers to window.o(i.window_pop) for window_pop
+    ui_win_main.o(i.win_main_proc) refers to window.o(.data) for win_ticks
+    ui_win_main.o(i.win_main_proc) refers to task_gui.o(.data) for taskGUITaskId
+    ui_win_main.o(i.win_main_proc) refers to ui_win_main.o(.data) for showLogoFlag
+    ui_win_main.o(i.win_main_proc) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_win_main.o(i.win_main_proc) refers to usersetting.o(.data) for config
+    ui_win_main.o(i.win_main_proc) refers to window.o(.constdata) for winCnt
+    ui_draw.o(i.DrawUI_Bitmap) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.DrawUI_Bitmap_Ex) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.DrawUI_Bitmap_Rever) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_AM) refers to ui_draw.o(.constdata) for am_pm
+    ui_draw.o(i.UI_Draw_AM) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_BPM) refers to ui_draw.o(.constdata) for bmp
+    ui_draw.o(i.UI_Draw_BPM) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_Battery) refers to ui_draw.o(.constdata) for battery_level
+    ui_draw.o(i.UI_Draw_Battery) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_Font_10x24) refers to ui_draw.o(.constdata) for number_10x24
+    ui_draw.o(i.UI_Draw_Font_10x24) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_Font_8x12) refers to ui_draw.o(.constdata) for Font_8x12
+    ui_draw.o(i.UI_Draw_Font_8x12) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_HR_Pressure) refers to ui_draw.o(.constdata) for bmp_b_pressure
+    ui_draw.o(i.UI_Draw_HR_Pressure) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_Val) refers to ui_draw.o(i.UI_Draw_Font_8x12) for UI_Draw_Font_8x12
+    ui_draw.o(i.UI_Draw_Vline) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_Week) refers to ui_draw.o(.constdata) for week
+    ui_draw.o(i.UI_Draw_Week) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.UI_Draw_pedo_hr_old) refers to ui_draw.o(.constdata) for pedometer_hr_old
+    ui_draw.o(i.UI_Draw_pedo_hr_old) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.draw_bitmap) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.draw_fill) refers to lcd_st7735.o(.bss) for frame_buffer
+    ui_draw.o(i.draw_line) refers to lcd_st7735.o(.bss) for frame_buffer
+    window.o(i.ui_window_manager) refers to osal.o(i.osal_set_event) for osal_set_event
+    window.o(i.ui_window_manager) refers to window.o(.data) for win_current
+    window.o(i.ui_window_manager) refers to task_gui.o(.data) for taskGUITaskId
+    window.o(i.ui_window_set_param) refers to window.o(.data) for window
+    window.o(i.win_identifier_map) refers to window.o(.constdata) for wmap
+    window.o(i.window_get) refers to window.o(.data) for win_show_flag
+    window.o(i.window_init) refers to window.o(.data) for win_current
+    window.o(i.window_init) refers to window.o(.bss) for win_stack
+    window.o(i.window_pop) refers to window.o(.data) for current_idx
+    window.o(i.window_pop) refers to window.o(.bss) for win_stack
+    window.o(i.window_push) refers to window.o(.data) for current_idx
+    window.o(i.window_push) refers to window.o(.bss) for win_stack
+    window.o(i.window_set) refers to window.o(i.win_identifier_map) for win_identifier_map
+    window.o(i.window_set) refers to window.o(i.window_show_set) for window_show_set
+    window.o(i.window_show_set) refers to window.o(.data) for win_show_flag
+    window.o(i.window_tack_reset) refers to window.o(.data) for current_idx
+    window.o(i.window_tack_reset) refers to window.o(.bss) for win_stack
+    window.o(.data) refers to ui_win_main.o(i.win_main_proc) for win_main_proc
+    arm_startup_nrf52.o(RESET) refers to arm_startup_nrf52.o(STACK) for __initial_sp
+    arm_startup_nrf52.o(RESET) refers to arm_startup_nrf52.o(.text) for Reset_Handler
+    arm_startup_nrf52.o(RESET) refers to irqhandler.o(i.GPIOTE_IRQHandler) for GPIOTE_IRQHandler
+    arm_startup_nrf52.o(RESET) refers to osal_timer.o(i.RTC1_IRQHandler) for RTC1_IRQHandler
+    arm_startup_nrf52.o(RESET) refers to osal_timer.o(i.RTC2_IRQHandler) for RTC2_IRQHandler
+    arm_startup_nrf52.o(RESET) refers to fpu.o(i.FPU_IRQHandler) for FPU_IRQHandler
+    arm_startup_nrf52.o(.text) refers to system_nrf52.o(i.SystemInit) for SystemInit
+    arm_startup_nrf52.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    system_nrf52.o(i.SystemCoreClockUpdate) refers to system_nrf52.o(.data) for SystemCoreClock
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_12) for errata_12
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_16) for errata_16
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_31) for errata_31
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_32) for errata_32
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_36) for errata_36
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_37) for errata_37
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_57) for errata_57
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_66) for errata_66
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_108) for errata_108
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.errata_136) for errata_136
+    system_nrf52.o(i.SystemInit) refers to system_nrf52.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    hfma2ylib.o(i.ALB_B_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.ASCII_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.BIG52GBK) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.CYRILLIC_B_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.CYRILLIC_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.GREECE_B_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.GREECE_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.HEBREW_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.LATIN_B_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.LATIN_B_GetData) refers to memseta.o(.text) for __aeabi_memclr
+    hfma2ylib.o(i.LATIN_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.LATIN_GetData) refers to memseta.o(.text) for __aeabi_memclr
+    hfma2ylib.o(i.SJIS2JIS) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.THAILAND_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.U2G) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.U2J) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.U2K) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.decompressbmp16) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.decompressbmp16) refers to hfma2ylib.o(i.unziphfmex) for unziphfmex
+    hfma2ylib.o(i.decompressbmp16) refers to hfma2ylib.o(.data) for .data
+    hfma2ylib.o(i.decompressbmp24) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.decompressbmp24) refers to memseta.o(.text) for __aeabi_memclr4
+    hfma2ylib.o(i.decompressbmp24) refers to hfma2ylib.o(i.unziphfmex) for unziphfmex
+    hfma2ylib.o(i.decompressbmp24) refers to memcpya.o(.text) for __aeabi_memcpy
+    hfma2ylib.o(i.decompressbmp24) refers to hfma2ylib.o(.data) for .data
+    hfma2ylib.o(i.hzbmp16) refers to hfma2ylib.o(i.gt) for gt
+    hfma2ylib.o(i.hzbmp16) refers to hfma2ylib.o(i.JIS_16_GetData) for JIS_16_GetData
+    hfma2ylib.o(i.hzbmp16) refers to hfma2ylib.o(i.KSC_16_GetData) for KSC_16_GetData
+    hfma2ylib.o(i.hzbmp16) refers to hfma2ylib.o(i.decompressbmp16) for decompressbmp16
+    hfma2ylib.o(i.hzbmp16) refers to hfma2ylib.o(i.lcdram_map) for lcdram_map
+    hfma2ylib.o(i.hzbmp16) refers to hfma2ylib.o(.data) for .data
+    hfma2ylib.o(i.hzbmp24) refers to hfma2ylib.o(i.GB2312_24_GetData) for GB2312_24_GetData
+    hfma2ylib.o(i.hzbmp24) refers to hfma2ylib.o(i.decompressbmp24) for decompressbmp24
+    hfma2ylib.o(i.hzbmp24) refers to hfma2ylib.o(i.lcdram_map) for lcdram_map
+    hfma2ylib.o(i.hzbmp24) refers to hfma2ylib.o(.data) for .data
+    hfma2ylib.o(i.shift_h_GetData) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.shift_h_GetData) refers to memseta.o(.text) for __aeabi_memclr
+    hfma2ylib.o(i.unziphfmex) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    hfma2ylib.o(i.unziphfmex) refers to hfma2ylib.o(.data) for .data
+    hfma2ylib.o(i.zz_zf) refers to f_lib.o(i.r_dat_bat) for r_dat_bat
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to arm_startup_nrf52.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to arm_startup_nrf52.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    spi_hw.o(i.spi_write_byte) refers to spi_hw.o(i.nrf_gpio_pin_set) for nrf_gpio_pin_set
+    spi_hw.o(i.spi_write_byte) refers to spi_hw.o(i.nrf_gpio_pin_clear) for nrf_gpio_pin_clear
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing main.o(i.covert_int2str), (156 bytes).
+    Removing main.o(i.gain_mac), (44 bytes).
+    Removing main.o(.bss), (18 bytes).
+    Removing main.o(.constdata), (17 bytes).
+    Removing clocktick.o(.rev16_text), (4 bytes).
+    Removing clocktick.o(.revsh_text), (4 bytes).
+    Removing clocktick.o(.rrx_text), (6 bytes).
+    Removing clocktick.o(i.Convert_UTC_time), (4 bytes).
+    Removing clocktick.o(i.SetDate), (8 bytes).
+    Removing clocktick.o(i.SetTimer), (6 bytes).
+    Removing clocktick.o(i.getUTC), (2 bytes).
+    Removing clocktick.o(i.load_date_time), (2 bytes).
+    Removing clocktick.o(i.setSystemTimer), (2 bytes).
+    Removing clocktick.o(.constdata), (48 bytes).
+    Removing clocktick.o(.data), (16 bytes).
+    Removing osal.o(i.osal_clear_event), (68 bytes).
+    Removing osal_pwrmgr.o(.rev16_text), (4 bytes).
+    Removing osal_pwrmgr.o(.revsh_text), (4 bytes).
+    Removing osal_pwrmgr.o(.rrx_text), (6 bytes).
+    Removing osal_task.o(.rev16_text), (4 bytes).
+    Removing osal_task.o(.revsh_text), (4 bytes).
+    Removing osal_task.o(.rrx_text), (6 bytes).
+    Removing osal_timer.o(.rev16_text), (4 bytes).
+    Removing osal_timer.o(.revsh_text), (4 bytes).
+    Removing osal_timer.o(.rrx_text), (6 bytes).
+    Removing osal_timer.o(i.hr_clock_rtc_init), (96 bytes).
+    Removing osal_timer.o(i.hr_clock_rtc_start), (36 bytes).
+    Removing osal_timer.o(i.hr_clock_rtc_stop), (56 bytes).
+    Removing osal_timer.o(i.osal_create_timer), (120 bytes).
+    Removing osal_timer.o(i.osal_release_timer), (44 bytes).
+    Removing osal_timer.o(i.osal_start_timer), (56 bytes).
+    Removing osal_timer.o(i.osal_stop_timer), (40 bytes).
+    Removing osal_timer.o(i.osal_stop_timerEx), (116 bytes).
+    Removing osal_timer.o(i.osal_timer_disable), (8 bytes).
+    Removing osal_timer.o(i.platform_clock_stop), (56 bytes).
+    Removing task_motor.o(.rev16_text), (4 bytes).
+    Removing task_motor.o(.revsh_text), (4 bytes).
+    Removing task_motor.o(.rrx_text), (6 bytes).
+    Removing task_motor.o(i.motor_disable), (14 bytes).
+    Removing task_gui.o(.rev16_text), (4 bytes).
+    Removing task_gui.o(.revsh_text), (4 bytes).
+    Removing task_gui.o(.rrx_text), (6 bytes).
+    Removing task_touch.o(.rev16_text), (4 bytes).
+    Removing task_touch.o(.revsh_text), (4 bytes).
+    Removing task_touch.o(.rrx_text), (6 bytes).
+    Removing task_frame.o(.rev16_text), (4 bytes).
+    Removing task_frame.o(.revsh_text), (4 bytes).
+    Removing task_frame.o(.rrx_text), (6 bytes).
+    Removing nrf_delay.o(.rev16_text), (4 bytes).
+    Removing nrf_delay.o(.revsh_text), (4 bytes).
+    Removing nrf_delay.o(.rrx_text), (6 bytes).
+    Removing irqhandler.o(.rev16_text), (4 bytes).
+    Removing irqhandler.o(.revsh_text), (4 bytes).
+    Removing irqhandler.o(.rrx_text), (6 bytes).
+    Removing spi_hw.o(.rev16_text), (4 bytes).
+    Removing spi_hw.o(.revsh_text), (4 bytes).
+    Removing spi_hw.o(.rrx_text), (6 bytes).
+    Removing spi_hw.o(i.spi_configure), (2 bytes).
+    Removing button.o(.rev16_text), (4 bytes).
+    Removing button.o(.revsh_text), (4 bytes).
+    Removing button.o(.rrx_text), (6 bytes).
+    Removing fpu.o(.rev16_text), (4 bytes).
+    Removing fpu.o(.revsh_text), (4 bytes).
+    Removing fpu.o(.rrx_text), (6 bytes).
+    Removing lcd_st7735.o(.rev16_text), (4 bytes).
+    Removing lcd_st7735.o(.revsh_text), (4 bytes).
+    Removing lcd_st7735.o(.rrx_text), (6 bytes).
+    Removing lcd_st7735.o(.emb_text), (118 bytes).
+    Removing lcd_st7735.o(i.Address_set), (82 bytes).
+    Removing f_lib.o(.rev16_text), (4 bytes).
+    Removing f_lib.o(.revsh_text), (4 bytes).
+    Removing f_lib.o(.rrx_text), (6 bytes).
+    Removing ui_win_main.o(.rev16_text), (4 bytes).
+    Removing ui_win_main.o(.revsh_text), (4 bytes).
+    Removing ui_win_main.o(.rrx_text), (6 bytes).
+    Removing ui_win_main.o(i.UI_Draw_Buttom), (64 bytes).
+    Removing ui_win_main.o(i.UI_Draw_Picture), (36 bytes).
+    Removing ui_win_main.o(i.UI_Draw_Title_Bluetooth), (2 bytes).
+    Removing ui_win_main.o(i.UI_Draw_Title_Bluetooth_1), (2 bytes).
+    Removing ui_win_main.o(i.UI_Draw_Title_test), (2 bytes).
+    Removing ui_win_main.o(i.level_convert), (38 bytes).
+    Removing ui_win_main.o(i.show_ui_logo), (2 bytes).
+    Removing ui_win_main.o(i.ui_show_val), (182 bytes).
+    Removing ui_draw.o(.rev16_text), (4 bytes).
+    Removing ui_draw.o(.revsh_text), (4 bytes).
+    Removing ui_draw.o(.rrx_text), (6 bytes).
+    Removing ui_draw.o(i.DrawUI_Bitmap_Ex), (168 bytes).
+    Removing ui_draw.o(i.DrawUI_Bitmap_Rever), (168 bytes).
+    Removing ui_draw.o(i.UI_Draw_AM), (264 bytes).
+    Removing ui_draw.o(i.UI_Draw_BPM), (264 bytes).
+    Removing ui_draw.o(i.UI_Draw_Battery), (144 bytes).
+    Removing ui_draw.o(i.UI_Draw_Font_10x24), (224 bytes).
+    Removing ui_draw.o(i.UI_Draw_Font_8x12), (264 bytes).
+    Removing ui_draw.o(i.UI_Draw_HR_Pressure), (272 bytes).
+    Removing ui_draw.o(i.UI_Draw_Val), (124 bytes).
+    Removing ui_draw.o(i.UI_Draw_Vline), (68 bytes).
+    Removing ui_draw.o(i.UI_Draw_Week), (272 bytes).
+    Removing ui_draw.o(i.UI_Draw_pedo_hr_old), (272 bytes).
+    Removing ui_draw.o(i.draw_bitmap), (88 bytes).
+    Removing ui_draw.o(i.draw_fill), (64 bytes).
+    Removing ui_draw.o(i.draw_line), (476 bytes).
+    Removing ui_draw.o(.constdata), (1621 bytes).
+    Removing window.o(.rev16_text), (4 bytes).
+    Removing window.o(.revsh_text), (4 bytes).
+    Removing window.o(.rrx_text), (6 bytes).
+    Removing window.o(i.ui_window_manager), (80 bytes).
+    Removing window.o(i.ui_window_set_param), (24 bytes).
+    Removing window.o(i.win_identifier_map), (44 bytes).
+    Removing window.o(i.window_get), (52 bytes).
+    Removing window.o(i.window_set), (58 bytes).
+    Removing window.o(i.window_show_set), (76 bytes).
+    Removing window.o(i.window_tack_reset), (28 bytes).
+    Removing ui_main_icon.o(.constdata), (38742 bytes).
+    Removing arm_startup_nrf52.o(HEAP), (8192 bytes).
+    Removing system_nrf52.o(.rev16_text), (4 bytes).
+    Removing system_nrf52.o(.revsh_text), (4 bytes).
+    Removing system_nrf52.o(.rrx_text), (6 bytes).
+    Removing hfma2ylib.o(i.ALB_B_GetData), (80 bytes).
+    Removing hfma2ylib.o(i.ASCII_GetData), (196 bytes).
+    Removing hfma2ylib.o(i.BIG52GBK), (96 bytes).
+    Removing hfma2ylib.o(i.CYRILLIC_B_GetData), (60 bytes).
+    Removing hfma2ylib.o(i.CYRILLIC_GetData), (56 bytes).
+    Removing hfma2ylib.o(i.GB2312_24_GetData), (78 bytes).
+    Removing hfma2ylib.o(i.GREECE_B_GetData), (40 bytes).
+    Removing hfma2ylib.o(i.GREECE_GetData), (40 bytes).
+    Removing hfma2ylib.o(i.HEBREW_GetData), (64 bytes).
+    Removing hfma2ylib.o(i.JIS_16_GetData), (70 bytes).
+    Removing hfma2ylib.o(i.KSC_16_GetData), (66 bytes).
+    Removing hfma2ylib.o(i.LATIN_B_GetData), (120 bytes).
+    Removing hfma2ylib.o(i.LATIN_GetData), (132 bytes).
+    Removing hfma2ylib.o(i.SJIS2JIS), (260 bytes).
+    Removing hfma2ylib.o(i.THAILAND_GetData), (44 bytes).
+    Removing hfma2ylib.o(i.U2J), (164 bytes).
+    Removing hfma2ylib.o(i.U2K), (132 bytes).
+    Removing hfma2ylib.o(i.big52gbf), (54 bytes).
+    Removing hfma2ylib.o(i.decompressbmp16), (304 bytes).
+    Removing hfma2ylib.o(i.decompressbmp24), (392 bytes).
+    Removing hfma2ylib.o(i.g), (206 bytes).
+    Removing hfma2ylib.o(i.gbs2t), (42 bytes).
+    Removing hfma2ylib.o(i.gt), (232 bytes).
+    Removing hfma2ylib.o(i.hzbmp16), (104 bytes).
+    Removing hfma2ylib.o(i.hzbmp24), (64 bytes).
+    Removing hfma2ylib.o(i.hzlookfor), (74 bytes).
+    Removing hfma2ylib.o(i.lcdram_map), (108 bytes).
+    Removing hfma2ylib.o(i.shift_h_GetData), (52 bytes).
+    Removing hfma2ylib.o(i.unicodeu2h), (124 bytes).
+    Removing hfma2ylib.o(i.unziphfmex), (276 bytes).
+    Removing hfma2ylib.o(i.zz_zf), (376 bytes).
+    Removing hfma2ylib.o(.data), (4 bytes).
+    Removing hfma2ylib.o(.data), (4 bytes).
+
+153 unused section(s) (total 58006 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    HFMA2Ylib.c                              0x00000000   Number         0  hfma2ylib.o ABSOLUTE
+    RTE\Device\nRF52832_xxAA\arm_startup_nrf52.s 0x00000000   Number         0  arm_startup_nrf52.o ABSOLUTE
+    RTE\Device\nRF52832_xxAA\system_nrf52.c  0x00000000   Number         0  system_nrf52.o ABSOLUTE
+    RTE\\Device\\nRF52832_xxAA\\system_nrf52.c 0x00000000   Number         0  system_nrf52.o ABSOLUTE
+    Sources\\ancc\\F_Lib.c                   0x00000000   Number         0  f_lib.o ABSOLUTE
+    Sources\\application\\ClockTick.c        0x00000000   Number         0  clocktick.o ABSOLUTE
+    Sources\\application\\main.c             0x00000000   Number         0  main.o ABSOLUTE
+    Sources\\drivers\\Button.c               0x00000000   Number         0  button.o ABSOLUTE
+    Sources\\drivers\\FPU.c                  0x00000000   Number         0  fpu.o ABSOLUTE
+    Sources\\drivers\\IRQHandler.c           0x00000000   Number         0  irqhandler.o ABSOLUTE
+    Sources\\drivers\\LCD_ST7735.c           0x00000000   Number         0  lcd_st7735.o ABSOLUTE
+    Sources\\drivers\\SPI_HW.c               0x00000000   Number         0  spi_hw.o ABSOLUTE
+    Sources\\gui\\UI_Draw.c                  0x00000000   Number         0  ui_draw.o ABSOLUTE
+    Sources\\gui\\UI_win_main.c              0x00000000   Number         0  ui_win_main.o ABSOLUTE
+    Sources\\gui\\Window.c                   0x00000000   Number         0  window.o ABSOLUTE
+    Sources\\osal\\src\\OSAL_PwrMgr.c        0x00000000   Number         0  osal_pwrmgr.o ABSOLUTE
+    Sources\\osal\\src\\OSAL_Task.c          0x00000000   Number         0  osal_task.o ABSOLUTE
+    Sources\\osal\\src\\OSAL_Timer.c         0x00000000   Number         0  osal_timer.o ABSOLUTE
+    Sources\\task\\Task_Frame.c              0x00000000   Number         0  task_frame.o ABSOLUTE
+    Sources\\task\\Task_GUI.c                0x00000000   Number         0  task_gui.o ABSOLUTE
+    Sources\\task\\Task_Motor.c              0x00000000   Number         0  task_motor.o ABSOLUTE
+    Sources\\task\\Task_Touch.c              0x00000000   Number         0  task_touch.o ABSOLUTE
+    Sources\ancc\F_Lib.c                     0x00000000   Number         0  f_lib.o ABSOLUTE
+    Sources\application\ClockTick.c          0x00000000   Number         0  clocktick.o ABSOLUTE
+    Sources\application\UserSetting.c        0x00000000   Number         0  usersetting.o ABSOLUTE
+    Sources\application\main.c               0x00000000   Number         0  main.o ABSOLUTE
+    Sources\drivers\Button.c                 0x00000000   Number         0  button.o ABSOLUTE
+    Sources\drivers\FPU.c                    0x00000000   Number         0  fpu.o ABSOLUTE
+    Sources\drivers\IRQHandler.c             0x00000000   Number         0  irqhandler.o ABSOLUTE
+    Sources\drivers\LCD_ST7735.c             0x00000000   Number         0  lcd_st7735.o ABSOLUTE
+    Sources\drivers\SPI_HW.c                 0x00000000   Number         0  spi_hw.o ABSOLUTE
+    Sources\gui\UI_Draw.c                    0x00000000   Number         0  ui_draw.o ABSOLUTE
+    Sources\gui\UI_win_main.c                0x00000000   Number         0  ui_win_main.o ABSOLUTE
+    Sources\gui\Window.c                     0x00000000   Number         0  window.o ABSOLUTE
+    Sources\icon\UI_lib.c                    0x00000000   Number         0  ui_lib.o ABSOLUTE
+    Sources\icon\UI_main_icon.c              0x00000000   Number         0  ui_main_icon.o ABSOLUTE
+    Sources\osal\src\OSAL.c                  0x00000000   Number         0  osal.o ABSOLUTE
+    Sources\osal\src\OSAL_PwrMgr.c           0x00000000   Number         0  osal_pwrmgr.o ABSOLUTE
+    Sources\osal\src\OSAL_Task.c             0x00000000   Number         0  osal_task.o ABSOLUTE
+    Sources\osal\src\OSAL_Timer.c            0x00000000   Number         0  osal_timer.o ABSOLUTE
+    Sources\task\Task_Frame.c                0x00000000   Number         0  task_frame.o ABSOLUTE
+    Sources\task\Task_GUI.c                  0x00000000   Number         0  task_gui.o ABSOLUTE
+    Sources\task\Task_Motor.c                0x00000000   Number         0  task_motor.o ABSOLUTE
+    Sources\task\Task_Touch.c                0x00000000   Number         0  task_touch.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    nRF5_SDK_11.0.0_89a8197\\components\\drivers_nrf\\delay\\nrf_delay.c 0x00000000   Number         0  nrf_delay.o ABSOLUTE
+    nRF5_SDK_11.0.0_89a8197\components\drivers_nrf\delay\nrf_delay.c 0x00000000   Number         0  nrf_delay.o ABSOLUTE
+    RESET                                    0x0001c000   Section      512  arm_startup_nrf52.o(RESET)
+    .ARM.Collect$$$$00000000                 0x0001c200   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x0001c200   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0001c204   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x0001c208   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x0001c208   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x0001c208   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x0001c210   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x0001c210   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x0001c210   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x0001c210   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .emb_text                                0x0001c214   Section      118  osal_timer.o(.emb_text)
+    $v0                                      0x0001c214   Number         0  osal_timer.o(.emb_text)
+    .emb_text                                0x0001c28c   Section      118  nrf_delay.o(.emb_text)
+    $v0                                      0x0001c28c   Number         0  nrf_delay.o(.emb_text)
+    .text                                    0x0001c304   Section       36  arm_startup_nrf52.o(.text)
+    $v0                                      0x0001c304   Number         0  arm_startup_nrf52.o(.text)
+    .text                                    0x0001c328   Section        0  memcpya.o(.text)
+    .text                                    0x0001c34c   Section        0  memseta.o(.text)
+    .text                                    0x0001c370   Section       36  init.o(.text)
+    i.CheckStatus                            0x0001c394   Section        0  f_lib.o(i.CheckStatus)
+    i.DrawUI_Bitmap                          0x0001c3d4   Section        0  ui_draw.o(i.DrawUI_Bitmap)
+    i.EntryDeepSleepMode                     0x0001c4b4   Section        0  f_lib.o(i.EntryDeepSleepMode)
+    i.EraseSector                            0x0001c4d0   Section        0  f_lib.o(i.EraseSector)
+    i.ExitDeepSleepMode                      0x0001c514   Section        0  f_lib.o(i.ExitDeepSleepMode)
+    i.FPU_IRQHandler                         0x0001c530   Section        0  fpu.o(i.FPU_IRQHandler)
+    i.GPIOTE_IRQHandler                      0x0001c54c   Section        0  irqhandler.o(i.GPIOTE_IRQHandler)
+    i.LCD_Clear                              0x0001c5d4   Section        0  lcd_st7735.o(i.LCD_Clear)
+    i.LCD_Config                             0x0001c5d6   Section        0  lcd_st7735.o(i.LCD_Config)
+    i.LCD_Config_Delay                       0x0001c7c4   Section        0  lcd_st7735.o(i.LCD_Config_Delay)
+    i.LCD_Init                               0x0001c7d8   Section        0  lcd_st7735.o(i.LCD_Init)
+    i.LCD_SPI_Init                           0x0001c7e4   Section        0  lcd_st7735.o(i.LCD_SPI_Init)
+    i.NVIC_ClearPendingIRQ                   0x0001c8b4   Section        0  osal_timer.o(i.NVIC_ClearPendingIRQ)
+    NVIC_ClearPendingIRQ                     0x0001c8b5   Thumb Code    18  osal_timer.o(i.NVIC_ClearPendingIRQ)
+    i.NVIC_DisableIRQ                        0x0001c8cc   Section        0  osal_timer.o(i.NVIC_DisableIRQ)
+    NVIC_DisableIRQ                          0x0001c8cd   Thumb Code    18  osal_timer.o(i.NVIC_DisableIRQ)
+    i.NVIC_EnableIRQ                         0x0001c8e4   Section        0  osal_timer.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x0001c8e5   Thumb Code    22  osal_timer.o(i.NVIC_EnableIRQ)
+    i.NVIC_SetPriority                       0x0001c8fc   Section        0  osal_timer.o(i.NVIC_SetPriority)
+    NVIC_SetPriority                         0x0001c8fd   Thumb Code    32  osal_timer.o(i.NVIC_SetPriority)
+    i.RTC1_IRQHandler                        0x0001c924   Section        0  osal_timer.o(i.RTC1_IRQHandler)
+    i.RTC2_IRQHandler                        0x0001c970   Section        0  osal_timer.o(i.RTC2_IRQHandler)
+    i.ReadPage                               0x0001c994   Section        0  f_lib.o(i.ReadPage)
+    i.SystemCoreClockUpdate                  0x0001c9f0   Section        0  system_nrf52.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x0001ca00   Section        0  system_nrf52.o(i.SystemInit)
+    i.U2G                                    0x0001cc84   Section        0  hfma2ylib.o(i.U2G)
+    i.WriteComm                              0x0001ce70   Section        0  lcd_st7735.o(i.WriteComm)
+    i.WriteData                              0x0001cec8   Section        0  lcd_st7735.o(i.WriteData)
+    i.WriteDisable                           0x0001cf24   Section        0  f_lib.o(i.WriteDisable)
+    i.WriteEnable                            0x0001cf40   Section        0  f_lib.o(i.WriteEnable)
+    i.WritePage                              0x0001cf5c   Section        0  f_lib.o(i.WritePage)
+    i.__Myget_PRIMASK                        0x0001cfb8   Section        0  osal.o(i.__Myget_PRIMASK)
+    __Myget_PRIMASK                          0x0001cfb9   Thumb Code     6  osal.o(i.__Myget_PRIMASK)
+    i.__Myset_PRIMASK                        0x0001cfbe   Section        0  osal.o(i.__Myset_PRIMASK)
+    __Myset_PRIMASK                          0x0001cfbf   Thumb Code     6  osal.o(i.__Myset_PRIMASK)
+    i.__scatterload_copy                     0x0001cfc4   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0001cfd2   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x0001cfd4   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.button_init                            0x0001cfe4   Section        0  button.o(i.button_init)
+    i.do_sync_frame                          0x0001d08c   Section        0  lcd_st7735.o(i.do_sync_frame)
+    i.errata_108                             0x0001d1dc   Section        0  system_nrf52.o(i.errata_108)
+    errata_108                               0x0001d1dd   Thumb Code    78  system_nrf52.o(i.errata_108)
+    i.errata_12                              0x0001d230   Section        0  system_nrf52.o(i.errata_12)
+    errata_12                                0x0001d231   Thumb Code    78  system_nrf52.o(i.errata_12)
+    i.errata_136                             0x0001d284   Section        0  system_nrf52.o(i.errata_136)
+    errata_136                               0x0001d285   Thumb Code    78  system_nrf52.o(i.errata_136)
+    i.errata_16                              0x0001d2d8   Section        0  system_nrf52.o(i.errata_16)
+    errata_16                                0x0001d2d9   Thumb Code    42  system_nrf52.o(i.errata_16)
+    i.errata_31                              0x0001d308   Section        0  system_nrf52.o(i.errata_31)
+    errata_31                                0x0001d309   Thumb Code    78  system_nrf52.o(i.errata_31)
+    i.errata_32                              0x0001d35c   Section        0  system_nrf52.o(i.errata_32)
+    errata_32                                0x0001d35d   Thumb Code    42  system_nrf52.o(i.errata_32)
+    i.errata_36                              0x0001d38c   Section        0  system_nrf52.o(i.errata_36)
+    errata_36                                0x0001d38d   Thumb Code    78  system_nrf52.o(i.errata_36)
+    i.errata_37                              0x0001d3e0   Section        0  system_nrf52.o(i.errata_37)
+    errata_37                                0x0001d3e1   Thumb Code    42  system_nrf52.o(i.errata_37)
+    i.errata_57                              0x0001d410   Section        0  system_nrf52.o(i.errata_57)
+    errata_57                                0x0001d411   Thumb Code    42  system_nrf52.o(i.errata_57)
+    i.errata_66                              0x0001d440   Section        0  system_nrf52.o(i.errata_66)
+    errata_66                                0x0001d441   Thumb Code    42  system_nrf52.o(i.errata_66)
+    i.font_init                              0x0001d470   Section        0  f_lib.o(i.font_init)
+    i.font_is_ok                             0x0001d4ce   Section        0  task_gui.o(i.font_is_ok)
+    i.lcd_display                            0x0001d4f4   Section        0  lcd_st7735.o(i.lcd_display)
+    i.main                                   0x0001d560   Section        0  main.o(i.main)
+    i.nrf_delay_ms                           0x0001d5c0   Section        0  nrf_delay.o(i.nrf_delay_ms)
+    i.nrf_gpio_cfg                           0x0001d5dc   Section        0  task_gui.o(i.nrf_gpio_cfg)
+    nrf_gpio_cfg                             0x0001d5dd   Thumb Code    30  task_gui.o(i.nrf_gpio_cfg)
+    i.nrf_gpio_cfg                           0x0001d600   Section        0  lcd_st7735.o(i.nrf_gpio_cfg)
+    nrf_gpio_cfg                             0x0001d601   Thumb Code    30  lcd_st7735.o(i.nrf_gpio_cfg)
+    i.nrf_gpio_cfg                           0x0001d624   Section        0  f_lib.o(i.nrf_gpio_cfg)
+    nrf_gpio_cfg                             0x0001d625   Thumb Code    30  f_lib.o(i.nrf_gpio_cfg)
+    i.nrf_gpio_cfg_default                   0x0001d648   Section        0  lcd_st7735.o(i.nrf_gpio_cfg_default)
+    nrf_gpio_cfg_default                     0x0001d649   Thumb Code    24  lcd_st7735.o(i.nrf_gpio_cfg_default)
+    i.nrf_gpio_pin_clear                     0x0001d660   Section        0  task_motor.o(i.nrf_gpio_pin_clear)
+    nrf_gpio_pin_clear                       0x0001d661   Thumb Code    10  task_motor.o(i.nrf_gpio_pin_clear)
+    i.nrf_gpio_pin_clear                     0x0001d670   Section        0  task_gui.o(i.nrf_gpio_pin_clear)
+    nrf_gpio_pin_clear                       0x0001d671   Thumb Code    10  task_gui.o(i.nrf_gpio_pin_clear)
+    i.nrf_gpio_pin_clear                     0x0001d680   Section        0  spi_hw.o(i.nrf_gpio_pin_clear)
+    nrf_gpio_pin_clear                       0x0001d681   Thumb Code    10  spi_hw.o(i.nrf_gpio_pin_clear)
+    i.nrf_gpio_pin_clear                     0x0001d690   Section        0  lcd_st7735.o(i.nrf_gpio_pin_clear)
+    nrf_gpio_pin_clear                       0x0001d691   Thumb Code    10  lcd_st7735.o(i.nrf_gpio_pin_clear)
+    i.nrf_gpio_pin_clear                     0x0001d6a0   Section        0  f_lib.o(i.nrf_gpio_pin_clear)
+    nrf_gpio_pin_clear                       0x0001d6a1   Thumb Code    10  f_lib.o(i.nrf_gpio_pin_clear)
+    i.nrf_gpio_pin_read                      0x0001d6b0   Section        0  task_touch.o(i.nrf_gpio_pin_read)
+    nrf_gpio_pin_read                        0x0001d6b1   Thumb Code    14  task_touch.o(i.nrf_gpio_pin_read)
+    i.nrf_gpio_pin_set                       0x0001d6c4   Section        0  task_gui.o(i.nrf_gpio_pin_set)
+    nrf_gpio_pin_set                         0x0001d6c5   Thumb Code    10  task_gui.o(i.nrf_gpio_pin_set)
+    i.nrf_gpio_pin_set                       0x0001d6d4   Section        0  spi_hw.o(i.nrf_gpio_pin_set)
+    nrf_gpio_pin_set                         0x0001d6d5   Thumb Code    10  spi_hw.o(i.nrf_gpio_pin_set)
+    i.nrf_gpio_pin_set                       0x0001d6e4   Section        0  lcd_st7735.o(i.nrf_gpio_pin_set)
+    nrf_gpio_pin_set                         0x0001d6e5   Thumb Code    10  lcd_st7735.o(i.nrf_gpio_pin_set)
+    i.nrf_gpio_pin_set                       0x0001d6f4   Section        0  f_lib.o(i.nrf_gpio_pin_set)
+    nrf_gpio_pin_set                         0x0001d6f5   Thumb Code    10  f_lib.o(i.nrf_gpio_pin_set)
+    i.osalTimerInit                          0x0001d704   Section        0  osal_timer.o(i.osalTimerInit)
+    i.osal_init_tasks                        0x0001d720   Section        0  osal_task.o(i.osal_init_tasks)
+    i.osal_pwrmgr_powerconserve              0x0001d758   Section        0  osal_pwrmgr.o(i.osal_pwrmgr_powerconserve)
+    i.osal_run_system                        0x0001d75c   Section        0  osal.o(i.osal_run_system)
+    i.osal_set_event                         0x0001d7fc   Section        0  osal.o(i.osal_set_event)
+    i.osal_start_system                      0x0001d840   Section        0  osal.o(i.osal_start_system)
+    i.osal_start_timerEx                     0x0001d848   Section        0  osal_timer.o(i.osal_start_timerEx)
+    i.osal_timer_isr                         0x0001d930   Section        0  osal_timer.o(i.osal_timer_isr)
+    i.osal_timer_start                       0x0001da20   Section        0  osal_timer.o(i.osal_timer_start)
+    i.platform_clock_init                    0x0001da2c   Section        0  osal_timer.o(i.platform_clock_init)
+    platform_clock_init                      0x0001da2d   Thumb Code   136  osal_timer.o(i.platform_clock_init)
+    i.platform_clock_start                   0x0001dacc   Section        0  osal_timer.o(i.platform_clock_start)
+    platform_clock_start                     0x0001dacd   Thumb Code     8  osal_timer.o(i.platform_clock_start)
+    i.r_dat_bat                              0x0001dad8   Section        0  f_lib.o(i.r_dat_bat)
+    i.show_test_ui                           0x0001db2c   Section        0  ui_win_main.o(i.show_test_ui)
+    i.spi_read_byte                          0x0001e2ac   Section        0  spi_hw.o(i.spi_read_byte)
+    i.spi_write_byte                         0x0001e2f4   Section        0  spi_hw.o(i.spi_write_byte)
+    i.sync_frame                             0x0001e348   Section        0  lcd_st7735.o(i.sync_frame)
+    i.system_clock_click                     0x0001e35c   Section        0  clocktick.o(i.system_clock_click)
+    i.taskFrame                              0x0001e35e   Section        0  task_frame.o(i.taskFrame)
+    i.taskFrameInit                          0x0001e424   Section        0  task_frame.o(i.taskFrameInit)
+    i.taskGUI                                0x0001e430   Section        0  task_gui.o(i.taskGUI)
+    i.taskGUIInit                            0x0001e8cc   Section        0  task_gui.o(i.taskGUIInit)
+    i.taskMotor                              0x0001e8e8   Section        0  task_motor.o(i.taskMotor)
+    i.taskMotorInit                          0x0001e8f0   Section        0  task_motor.o(i.taskMotorInit)
+    i.taskTouch                              0x0001e938   Section        0  task_touch.o(i.taskTouch)
+    i.taskTouchInit                          0x0001e9ec   Section        0  task_touch.o(i.taskTouchInit)
+    i.win_main_proc                          0x0001e9f8   Section        0  ui_win_main.o(i.win_main_proc)
+    i.window_init                            0x0001eb64   Section        0  window.o(i.window_init)
+    i.window_pop                             0x0001eba8   Section        0  window.o(i.window_pop)
+    i.window_push                            0x0001ebdc   Section        0  window.o(i.window_push)
+    .constdata                               0x0001ebf8   Section       20  osal_task.o(.constdata)
+    .constdata                               0x0001ec0c   Section     3791  ui_win_main.o(.constdata)
+    .constdata                               0x0001fadc   Section       22  window.o(.constdata)
+    .constdata                               0x0001faf4   Section    43336  ui_lib.o(.constdata)
+    .data                                    0x20002080   Section       10  usersetting.o(.data)
+    .data                                    0x2000208c   Section        4  osal.o(.data)
+    .data                                    0x20002090   Section       12  osal_timer.o(.data)
+    .data                                    0x2000209c   Section        4  task_motor.o(.data)
+    .data                                    0x200020a0   Section       49  task_gui.o(.data)
+    hfmbdd                                   0x200020a0   Data           4  task_gui.o(.data)
+    flag                                     0x200020d0   Data           1  task_gui.o(.data)
+    .data                                    0x200020d4   Section       12  task_touch.o(.data)
+    counter                                  0x200020dc   Data           4  task_touch.o(.data)
+    .data                                    0x200020e0   Section        4  task_frame.o(.data)
+    .data                                    0x200020e4   Section       12  irqhandler.o(.data)
+    .data                                    0x200020f0   Section        1  lcd_st7735.o(.data)
+    .data                                    0x200020f4   Section        4  f_lib.o(.data)
+    .data                                    0x200020f8   Section        2  ui_win_main.o(.data)
+    .data                                    0x200020fc   Section       36  window.o(.data)
+    .data                                    0x20002120   Section        4  system_nrf52.o(.data)
+    __tagsym$$used                           0x20002120   Number         0  system_nrf52.o(.data)
+    .bss                                     0x20002124   Section       16  osal_task.o(.bss)
+    .bss                                     0x20002134   Section      960  osal_timer.o(.bss)
+    .bss                                     0x200024f4   Section     8216  task_gui.o(.bss)
+    .bss                                     0x2000450c   Section    25600  lcd_st7735.o(.bss)
+    .bss                                     0x2000a90c   Section       16  window.o(.bss)
+    STACK                                    0x2000a920   Section     8192  arm_startup_nrf52.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000200   Number         0  arm_startup_nrf52.o ABSOLUTE
+    __Vectors                                0x0001c000   Data           4  arm_startup_nrf52.o(RESET)
+    __Vectors_End                            0x0001c200   Data           0  arm_startup_nrf52.o(RESET)
+    __main                                   0x0001c201   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x0001c201   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0001c205   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x0001c209   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x0001c209   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x0001c209   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x0001c209   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x0001c211   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x0001c211   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    __asm___12_OSAL_Timer_c_timer__nrf_delay_us 0x0001c215   Thumb Code   118  osal_timer.o(.emb_text)
+    __asm___11_nrf_delay_c_532987f3__nrf_delay_us 0x0001c28d   Thumb Code   118  nrf_delay.o(.emb_text)
+    Reset_Handler                            0x0001c305   Thumb Code     8  arm_startup_nrf52.o(.text)
+    NMI_Handler                              0x0001c30d   Thumb Code     2  arm_startup_nrf52.o(.text)
+    HardFault_Handler                        0x0001c30f   Thumb Code     2  arm_startup_nrf52.o(.text)
+    MemoryManagement_Handler                 0x0001c311   Thumb Code     2  arm_startup_nrf52.o(.text)
+    BusFault_Handler                         0x0001c313   Thumb Code     2  arm_startup_nrf52.o(.text)
+    UsageFault_Handler                       0x0001c315   Thumb Code     2  arm_startup_nrf52.o(.text)
+    SVC_Handler                              0x0001c317   Thumb Code     2  arm_startup_nrf52.o(.text)
+    DebugMon_Handler                         0x0001c319   Thumb Code     2  arm_startup_nrf52.o(.text)
+    PendSV_Handler                           0x0001c31b   Thumb Code     2  arm_startup_nrf52.o(.text)
+    SysTick_Handler                          0x0001c31d   Thumb Code     2  arm_startup_nrf52.o(.text)
+    CCM_AAR_IRQHandler                       0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    COMP_LPCOMP_IRQHandler                   0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    ECB_IRQHandler                           0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    I2S_IRQHandler                           0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    MWU_IRQHandler                           0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    NFCT_IRQHandler                          0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    PDM_IRQHandler                           0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    POWER_CLOCK_IRQHandler                   0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    PWM0_IRQHandler                          0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    PWM1_IRQHandler                          0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    PWM2_IRQHandler                          0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    QDEC_IRQHandler                          0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    RADIO_IRQHandler                         0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    RNG_IRQHandler                           0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    RTC0_IRQHandler                          0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SAADC_IRQHandler                         0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SPIM0_SPIS0_TWIM0_TWIS0_SPI0_TWI0_IRQHandler 0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SPIM1_SPIS1_TWIM1_TWIS1_SPI1_TWI1_IRQHandler 0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SPIM2_SPIS2_SPI2_IRQHandler              0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SWI0_EGU0_IRQHandler                     0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SWI1_EGU1_IRQHandler                     0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SWI2_EGU2_IRQHandler                     0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SWI3_EGU3_IRQHandler                     0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SWI4_EGU4_IRQHandler                     0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    SWI5_EGU5_IRQHandler                     0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    TEMP_IRQHandler                          0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    TIMER0_IRQHandler                        0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    TIMER1_IRQHandler                        0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    TIMER2_IRQHandler                        0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    TIMER3_IRQHandler                        0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    TIMER4_IRQHandler                        0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    UARTE0_UART0_IRQHandler                  0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    WDT_IRQHandler                           0x0001c31f   Thumb Code     0  arm_startup_nrf52.o(.text)
+    __aeabi_memcpy                           0x0001c329   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x0001c329   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x0001c329   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memset                           0x0001c34d   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x0001c34d   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x0001c34d   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x0001c35b   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x0001c35b   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x0001c35b   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x0001c35f   Thumb Code    18  memseta.o(.text)
+    __scatterload                            0x0001c371   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x0001c371   Thumb Code     0  init.o(.text)
+    CheckStatus                              0x0001c395   Thumb Code    54  f_lib.o(i.CheckStatus)
+    DrawUI_Bitmap                            0x0001c3d5   Thumb Code   218  ui_draw.o(i.DrawUI_Bitmap)
+    EntryDeepSleepMode                       0x0001c4b5   Thumb Code    24  f_lib.o(i.EntryDeepSleepMode)
+    EraseSector                              0x0001c4d1   Thumb Code    62  f_lib.o(i.EraseSector)
+    ExitDeepSleepMode                        0x0001c515   Thumb Code    24  f_lib.o(i.ExitDeepSleepMode)
+    FPU_IRQHandler                           0x0001c531   Thumb Code    24  fpu.o(i.FPU_IRQHandler)
+    GPIOTE_IRQHandler                        0x0001c54d   Thumb Code   114  irqhandler.o(i.GPIOTE_IRQHandler)
+    LCD_Clear                                0x0001c5d5   Thumb Code     2  lcd_st7735.o(i.LCD_Clear)
+    LCD_Config                               0x0001c5d7   Thumb Code   494  lcd_st7735.o(i.LCD_Config)
+    LCD_Config_Delay                         0x0001c7c5   Thumb Code    14  lcd_st7735.o(i.LCD_Config_Delay)
+    LCD_Init                                 0x0001c7d9   Thumb Code    12  lcd_st7735.o(i.LCD_Init)
+    LCD_SPI_Init                             0x0001c7e5   Thumb Code   194  lcd_st7735.o(i.LCD_SPI_Init)
+    RTC1_IRQHandler                          0x0001c925   Thumb Code    64  osal_timer.o(i.RTC1_IRQHandler)
+    RTC2_IRQHandler                          0x0001c971   Thumb Code    26  osal_timer.o(i.RTC2_IRQHandler)
+    ReadPage                                 0x0001c995   Thumb Code    86  f_lib.o(i.ReadPage)
+    SystemCoreClockUpdate                    0x0001c9f1   Thumb Code     8  system_nrf52.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x0001ca01   Thumb Code   578  system_nrf52.o(i.SystemInit)
+    U2G                                      0x0001cc85   Thumb Code   476  hfma2ylib.o(i.U2G)
+    WriteComm                                0x0001ce71   Thumb Code    78  lcd_st7735.o(i.WriteComm)
+    WriteData                                0x0001cec9   Thumb Code    84  lcd_st7735.o(i.WriteData)
+    WriteDisable                             0x0001cf25   Thumb Code    24  f_lib.o(i.WriteDisable)
+    WriteEnable                              0x0001cf41   Thumb Code    24  f_lib.o(i.WriteEnable)
+    WritePage                                0x0001cf5d   Thumb Code    88  f_lib.o(i.WritePage)
+    __scatterload_copy                       0x0001cfc5   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0001cfd3   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x0001cfd5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    button_init                              0x0001cfe5   Thumb Code   134  button.o(i.button_init)
+    do_sync_frame                            0x0001d08d   Thumb Code   314  lcd_st7735.o(i.do_sync_frame)
+    font_init                                0x0001d471   Thumb Code    94  f_lib.o(i.font_init)
+    font_is_ok                               0x0001d4cf   Thumb Code    38  task_gui.o(i.font_is_ok)
+    lcd_display                              0x0001d4f5   Thumb Code    96  lcd_st7735.o(i.lcd_display)
+    main                                     0x0001d561   Thumb Code    84  main.o(i.main)
+    nrf_delay_ms                             0x0001d5c1   Thumb Code    26  nrf_delay.o(i.nrf_delay_ms)
+    osalTimerInit                            0x0001d705   Thumb Code    20  osal_timer.o(i.osalTimerInit)
+    osal_init_tasks                          0x0001d721   Thumb Code    50  osal_task.o(i.osal_init_tasks)
+    osal_pwrmgr_powerconserve                0x0001d759   Thumb Code     4  osal_pwrmgr.o(i.osal_pwrmgr_powerconserve)
+    osal_run_system                          0x0001d75d   Thumb Code   142  osal.o(i.osal_run_system)
+    osal_set_event                           0x0001d7fd   Thumb Code    60  osal.o(i.osal_set_event)
+    osal_start_system                        0x0001d841   Thumb Code     8  osal.o(i.osal_start_system)
+    osal_start_timerEx                       0x0001d849   Thumb Code   226  osal_timer.o(i.osal_start_timerEx)
+    osal_timer_isr                           0x0001d931   Thumb Code   226  osal_timer.o(i.osal_timer_isr)
+    osal_timer_start                         0x0001da21   Thumb Code    12  osal_timer.o(i.osal_timer_start)
+    r_dat_bat                                0x0001dad9   Thumb Code    80  f_lib.o(i.r_dat_bat)
+    show_test_ui                             0x0001db2d   Thumb Code  1892  ui_win_main.o(i.show_test_ui)
+    spi_read_byte                            0x0001e2ad   Thumb Code    68  spi_hw.o(i.spi_read_byte)
+    spi_write_byte                           0x0001e2f5   Thumb Code    84  spi_hw.o(i.spi_write_byte)
+    sync_frame                               0x0001e349   Thumb Code    14  lcd_st7735.o(i.sync_frame)
+    system_clock_click                       0x0001e35d   Thumb Code     2  clocktick.o(i.system_clock_click)
+    taskFrame                                0x0001e35f   Thumb Code   198  task_frame.o(i.taskFrame)
+    taskFrameInit                            0x0001e425   Thumb Code     6  task_frame.o(i.taskFrameInit)
+    taskGUI                                  0x0001e431   Thumb Code  1176  task_gui.o(i.taskGUI)
+    taskGUIInit                              0x0001e8cd   Thumb Code    24  task_gui.o(i.taskGUIInit)
+    taskMotor                                0x0001e8e9   Thumb Code     6  task_motor.o(i.taskMotor)
+    taskMotorInit                            0x0001e8f1   Thumb Code    64  task_motor.o(i.taskMotorInit)
+    taskTouch                                0x0001e939   Thumb Code   162  task_touch.o(i.taskTouch)
+    taskTouchInit                            0x0001e9ed   Thumb Code     6  task_touch.o(i.taskTouchInit)
+    win_main_proc                            0x0001e9f9   Thumb Code   326  ui_win_main.o(i.win_main_proc)
+    window_init                              0x0001eb65   Thumb Code    46  window.o(i.window_init)
+    window_pop                               0x0001eba9   Thumb Code    42  window.o(i.window_pop)
+    window_push                              0x0001ebdd   Thumb Code    20  window.o(i.window_push)
+    tasksArr                                 0x0001ebf8   Data          16  osal_task.o(.constdata)
+    tasksCnt                                 0x0001ec08   Data           4  osal_task.o(.constdata)
+    p                                        0x0001ec0c   Data           8  ui_win_main.o(.constdata)
+    bmp_battery                              0x0001ec14   Data         152  ui_win_main.o(.constdata)
+    bmp_bluetooth                            0x0001ecac   Data          72  ui_win_main.o(.constdata)
+    Week                                     0x0001ecf4   Data         364  ui_win_main.o(.constdata)
+    Month                                    0x0001ee60   Data         624  ui_win_main.o(.constdata)
+    bmp_battery_1                            0x0001f0d0   Data         152  ui_win_main.o(.constdata)
+    bmp_bluetooth_1                          0x0001f168   Data          48  ui_win_main.o(.constdata)
+    Font_7x12                                0x0001f198   Data         140  ui_win_main.o(.constdata)
+    FChip_Text                               0x0001f224   Data          84  ui_win_main.o(.constdata)
+    FChip_Error                              0x0001f278   Data          70  ui_win_main.o(.constdata)
+    GSensor_Text                             0x0001f2be   Data         112  ui_win_main.o(.constdata)
+    OK                                       0x0001f32e   Data          28  ui_win_main.o(.constdata)
+    HR_Text                                  0x0001f34a   Data          28  ui_win_main.o(.constdata)
+    GSensor_Wait                             0x0001f366   Data          16  ui_win_main.o(.constdata)
+    line_                                    0x0001f376   Data          96  ui_win_main.o(.constdata)
+    Font_str                                 0x0001f3d6   Data         108  ui_win_main.o(.constdata)
+    GS_str                                   0x0001f442   Data         135  ui_win_main.o(.constdata)
+    Batt                                     0x0001f4c9   Data         108  ui_win_main.o(.constdata)
+    Hr                                       0x0001f535   Data          54  ui_win_main.o(.constdata)
+    OK_                                      0x0001f56b   Data          72  ui_win_main.o(.constdata)
+    ERR_                                     0x0001f5b3   Data          72  ui_win_main.o(.constdata)
+    FONT_s                                   0x0001f5fb   Data          64  ui_win_main.o(.constdata)
+    GSensor_s                                0x0001f63b   Data          64  ui_win_main.o(.constdata)
+    Batt_s                                   0x0001f67b   Data          64  ui_win_main.o(.constdata)
+    Charge_s                                 0x0001f6bb   Data          64  ui_win_main.o(.constdata)
+    HR_s                                     0x0001f6fb   Data          64  ui_win_main.o(.constdata)
+    _OK_                                     0x0001f73b   Data          64  ui_win_main.o(.constdata)
+    Font_Flash                               0x0001f77b   Data         320  ui_win_main.o(.constdata)
+    Font_8x16_1                              0x0001f8bb   Data         192  ui_win_main.o(.constdata)
+    Font_Info                                0x0001f97b   Data         352  ui_win_main.o(.constdata)
+    winCnt                                   0x0001fadc   Data           4  window.o(.constdata)
+    wmap                                     0x0001fae0   Data          18  window.o(.constdata)
+    flash_ui                                 0x0001faf4   Data         120  ui_lib.o(.constdata)
+    gImage_3                                 0x0001fb6c   Data        7280  ui_lib.o(.constdata)
+    gImage_2                                 0x000217dc   Data        8192  ui_lib.o(.constdata)
+    gImage_1                                 0x000237dc   Data        5568  ui_lib.o(.constdata)
+    gImage_c                                 0x00024d9c   Data        7632  ui_lib.o(.constdata)
+    gImage_my_demo_1                         0x00026b6c   Data        7632  ui_lib.o(.constdata)
+    ui_pedomter                              0x0002893c   Data        6912  ui_lib.o(.constdata)
+    Region$$Table$$Base                      0x0002a43c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0002a45c   Number         0  anon$$obj.o(Region$$Table)
+    config                                   0x20002080   Data          10  usersetting.o(.data)
+    sleepEnable                              0x2000208c   Data           4  osal.o(.data)
+    osal_systemClock                         0x20002090   Data           4  osal_timer.o(.data)
+    systemTick                               0x20002094   Data           4  osal_timer.o(.data)
+    hr_mticks                                0x20002098   Data           4  osal_timer.o(.data)
+    taskMotorTaskId                          0x2000209c   Data           4  task_motor.o(.data)
+    taskGUITaskId                            0x200020a4   Data           4  task_gui.o(.data)
+    Flash_stat                               0x200020a8   Data           4  task_gui.o(.data)
+    erase_All_page                           0x200020ac   Data           4  task_gui.o(.data)
+    erase_Cur_page                           0x200020b0   Data           4  task_gui.o(.data)
+    write_All_page                           0x200020b4   Data           4  task_gui.o(.data)
+    write_Cur_page                           0x200020b8   Data           4  task_gui.o(.data)
+    read_All_page                            0x200020bc   Data           4  task_gui.o(.data)
+    read_Cur_page                            0x200020c0   Data           4  task_gui.o(.data)
+    write_sector_offset                      0x200020c4   Data           4  task_gui.o(.data)
+    font_ok                                  0x200020c8   Data           1  task_gui.o(.data)
+    cidx                                     0x200020cc   Data           4  task_gui.o(.data)
+    taskTouchTaskId                          0x200020d4   Data           4  task_touch.o(.data)
+    keyFlag                                  0x200020d8   Data           1  task_touch.o(.data)
+    taskFrameTaskId                          0x200020e0   Data           4  task_frame.o(.data)
+    taskStepInterrutCount                    0x200020e4   Data           4  irqhandler.o(.data)
+    taskStepInterrutMonotorCnt               0x200020e8   Data           4  irqhandler.o(.data)
+    touchInterruptCount                      0x200020ec   Data           4  irqhandler.o(.data)
+    lcd_enable_flag                          0x200020f0   Data           1  lcd_st7735.o(.data)
+    busy_cnt                                 0x200020f4   Data           4  f_lib.o(.data)
+    fristBootFlag                            0x200020f8   Data           1  ui_win_main.o(.data)
+    showLogoFlag                             0x200020f9   Data           1  ui_win_main.o(.data)
+    window                                   0x200020fc   Data          24  window.o(.data)
+    win_current                              0x20002114   Data           4  window.o(.data)
+    win_ticks                                0x20002118   Data           2  window.o(.data)
+    current_idx                              0x2000211a   Data           1  window.o(.data)
+    win_show_flag                            0x2000211c   Data           4  window.o(.data)
+    SystemCoreClock                          0x20002120   Data           4  system_nrf52.o(.data)
+    taskEventsTable                          0x20002124   Data          16  osal_task.o(.bss)
+    timer                                    0x20002134   Data         960  osal_timer.o(.bss)
+    error_cnt                                0x200024f4   Data          24  task_gui.o(.bss)
+    buf                                      0x2000250c   Data        8192  task_gui.o(.bss)
+    frame_buffer                             0x2000450c   Data       25600  lcd_st7735.o(.bss)
+    win_stack                                0x2000a90c   Data          16  window.o(.bss)
+    __initial_sp                             0x2000c920   Data           0  arm_startup_nrf52.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0001c201
+
+  Load Region LR_IROM1 (Base: 0x0001c000, Size: 0x0000e500, Max: 0x00064000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x0001c000, Size: 0x0000e45c, Max: 0x00064000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x0001c000   0x00000200   Data   RO         1551    RESET               arm_startup_nrf52.o
+    0x0001c200   0x00000000   Code   RO         1861  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x0001c200   0x00000004   Code   RO         1870    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0001c204   0x00000004   Code   RO         1873    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x0001c208   0x00000000   Code   RO         1875    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x0001c208   0x00000000   Code   RO         1877    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x0001c208   0x00000008   Code   RO         1878    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0001c210   0x00000000   Code   RO         1880    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0001c210   0x00000000   Code   RO         1882    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0001c210   0x00000004   Code   RO         1871    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0001c214   0x00000076   Code   RO          385    .emb_text           osal_timer.o
+    0x0001c28a   0x00000002   PAD
+    0x0001c28c   0x00000076   Code   RO          779    .emb_text           nrf_delay.o
+    0x0001c302   0x00000002   PAD
+    0x0001c304   0x00000024   Code   RO         1552    .text               arm_startup_nrf52.o
+    0x0001c328   0x00000024   Code   RO         1864    .text               mc_w.l(memcpya.o)
+    0x0001c34c   0x00000024   Code   RO         1866    .text               mc_w.l(memseta.o)
+    0x0001c370   0x00000024   Code   RO         1884    .text               mc_w.l(init.o)
+    0x0001c394   0x00000040   Code   RO         1088    i.CheckStatus       f_lib.o
+    0x0001c3d4   0x000000e0   Code   RO         1293    i.DrawUI_Bitmap     ui_draw.o
+    0x0001c4b4   0x0000001c   Code   RO         1089    i.EntryDeepSleepMode  f_lib.o
+    0x0001c4d0   0x00000044   Code   RO         1090    i.EraseSector       f_lib.o
+    0x0001c514   0x0000001c   Code   RO         1091    i.ExitDeepSleepMode  f_lib.o
+    0x0001c530   0x0000001c   Code   RO          939    i.FPU_IRQHandler    fpu.o
+    0x0001c54c   0x00000088   Code   RO          817    i.GPIOTE_IRQHandler  irqhandler.o
+    0x0001c5d4   0x00000002   Code   RO          972    i.LCD_Clear         lcd_st7735.o
+    0x0001c5d6   0x000001ee   Code   RO          973    i.LCD_Config        lcd_st7735.o
+    0x0001c7c4   0x00000014   Code   RO          974    i.LCD_Config_Delay  lcd_st7735.o
+    0x0001c7d8   0x0000000c   Code   RO          975    i.LCD_Init          lcd_st7735.o
+    0x0001c7e4   0x000000d0   Code   RO          976    i.LCD_SPI_Init      lcd_st7735.o
+    0x0001c8b4   0x00000018   Code   RO          386    i.NVIC_ClearPendingIRQ  osal_timer.o
+    0x0001c8cc   0x00000018   Code   RO          387    i.NVIC_DisableIRQ   osal_timer.o
+    0x0001c8e4   0x00000016   Code   RO          388    i.NVIC_EnableIRQ    osal_timer.o
+    0x0001c8fa   0x00000002   PAD
+    0x0001c8fc   0x00000028   Code   RO          389    i.NVIC_SetPriority  osal_timer.o
+    0x0001c924   0x0000004c   Code   RO          390    i.RTC1_IRQHandler   osal_timer.o
+    0x0001c970   0x00000024   Code   RO          391    i.RTC2_IRQHandler   osal_timer.o
+    0x0001c994   0x0000005c   Code   RO         1092    i.ReadPage          f_lib.o
+    0x0001c9f0   0x00000010   Code   RO         1559    i.SystemCoreClockUpdate  system_nrf52.o
+    0x0001ca00   0x00000284   Code   RO         1560    i.SystemInit        system_nrf52.o
+    0x0001cc84   0x000001ec   Code   RO         1661    i.U2G               nrf52832_xxaa.lib(hfma2ylib.o)
+    0x0001ce70   0x00000058   Code   RO          977    i.WriteComm         lcd_st7735.o
+    0x0001cec8   0x0000005c   Code   RO          978    i.WriteData         lcd_st7735.o
+    0x0001cf24   0x0000001c   Code   RO         1093    i.WriteDisable      f_lib.o
+    0x0001cf40   0x0000001c   Code   RO         1094    i.WriteEnable       f_lib.o
+    0x0001cf5c   0x0000005c   Code   RO         1095    i.WritePage         f_lib.o
+    0x0001cfb8   0x00000006   Code   RO          244    i.__Myget_PRIMASK   osal.o
+    0x0001cfbe   0x00000006   Code   RO          245    i.__Myset_PRIMASK   osal.o
+    0x0001cfc4   0x0000000e   Code   RO         1888    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0001cfd2   0x00000002   Code   RO         1889    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0001cfd4   0x0000000e   Code   RO         1890    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0001cfe2   0x00000002   PAD
+    0x0001cfe4   0x000000a8   Code   RO          905    i.button_init       button.o
+    0x0001d08c   0x00000150   Code   RO          979    i.do_sync_frame     lcd_st7735.o
+    0x0001d1dc   0x00000054   Code   RO         1561    i.errata_108        system_nrf52.o
+    0x0001d230   0x00000054   Code   RO         1562    i.errata_12         system_nrf52.o
+    0x0001d284   0x00000054   Code   RO         1563    i.errata_136        system_nrf52.o
+    0x0001d2d8   0x00000030   Code   RO         1564    i.errata_16         system_nrf52.o
+    0x0001d308   0x00000054   Code   RO         1565    i.errata_31         system_nrf52.o
+    0x0001d35c   0x00000030   Code   RO         1566    i.errata_32         system_nrf52.o
+    0x0001d38c   0x00000054   Code   RO         1567    i.errata_36         system_nrf52.o
+    0x0001d3e0   0x00000030   Code   RO         1568    i.errata_37         system_nrf52.o
+    0x0001d410   0x00000030   Code   RO         1569    i.errata_57         system_nrf52.o
+    0x0001d440   0x00000030   Code   RO         1570    i.errata_66         system_nrf52.o
+    0x0001d470   0x0000005e   Code   RO         1096    i.font_init         f_lib.o
+    0x0001d4ce   0x00000026   Code   RO          601    i.font_is_ok        task_gui.o
+    0x0001d4f4   0x0000006c   Code   RO          980    i.lcd_display       lcd_st7735.o
+    0x0001d560   0x00000060   Code   RO            6    i.main              main.o
+    0x0001d5c0   0x0000001a   Code   RO          780    i.nrf_delay_ms      nrf_delay.o
+    0x0001d5da   0x00000002   PAD
+    0x0001d5dc   0x00000024   Code   RO          602    i.nrf_gpio_cfg      task_gui.o
+    0x0001d600   0x00000024   Code   RO          981    i.nrf_gpio_cfg      lcd_st7735.o
+    0x0001d624   0x00000024   Code   RO         1097    i.nrf_gpio_cfg      f_lib.o
+    0x0001d648   0x00000018   Code   RO          982    i.nrf_gpio_cfg_default  lcd_st7735.o
+    0x0001d660   0x00000010   Code   RO          552    i.nrf_gpio_pin_clear  task_motor.o
+    0x0001d670   0x00000010   Code   RO          603    i.nrf_gpio_pin_clear  task_gui.o
+    0x0001d680   0x00000010   Code   RO          844    i.nrf_gpio_pin_clear  spi_hw.o
+    0x0001d690   0x00000010   Code   RO          983    i.nrf_gpio_pin_clear  lcd_st7735.o
+    0x0001d6a0   0x00000010   Code   RO         1098    i.nrf_gpio_pin_clear  f_lib.o
+    0x0001d6b0   0x00000014   Code   RO          695    i.nrf_gpio_pin_read  task_touch.o
+    0x0001d6c4   0x00000010   Code   RO          604    i.nrf_gpio_pin_set  task_gui.o
+    0x0001d6d4   0x00000010   Code   RO          845    i.nrf_gpio_pin_set  spi_hw.o
+    0x0001d6e4   0x00000010   Code   RO          984    i.nrf_gpio_pin_set  lcd_st7735.o
+    0x0001d6f4   0x00000010   Code   RO         1099    i.nrf_gpio_pin_set  f_lib.o
+    0x0001d704   0x0000001c   Code   RO          395    i.osalTimerInit     osal_timer.o
+    0x0001d720   0x00000038   Code   RO          324    i.osal_init_tasks   osal_task.o
+    0x0001d758   0x00000004   Code   RO          300    i.osal_pwrmgr_powerconserve  osal_pwrmgr.o
+    0x0001d75c   0x000000a0   Code   RO          247    i.osal_run_system   osal.o
+    0x0001d7fc   0x00000044   Code   RO          248    i.osal_set_event    osal.o
+    0x0001d840   0x00000008   Code   RO          249    i.osal_start_system  osal.o
+    0x0001d848   0x000000e8   Code   RO          399    i.osal_start_timerEx  osal_timer.o
+    0x0001d930   0x000000f0   Code   RO          403    i.osal_timer_isr    osal_timer.o
+    0x0001da20   0x0000000c   Code   RO          404    i.osal_timer_start  osal_timer.o
+    0x0001da2c   0x000000a0   Code   RO          405    i.platform_clock_init  osal_timer.o
+    0x0001dacc   0x0000000c   Code   RO          406    i.platform_clock_start  osal_timer.o
+    0x0001dad8   0x00000054   Code   RO         1100    i.r_dat_bat         f_lib.o
+    0x0001db2c   0x00000780   Code   RO         1193    i.show_test_ui      ui_win_main.o
+    0x0001e2ac   0x00000048   Code   RO          847    i.spi_read_byte     spi_hw.o
+    0x0001e2f4   0x00000054   Code   RO          878    i.spi_write_byte    spi_hw.o
+    0x0001e348   0x00000014   Code   RO          985    i.sync_frame        lcd_st7735.o
+    0x0001e35c   0x00000002   Code   RO          122    i.system_clock_click  clocktick.o
+    0x0001e35e   0x000000c6   Code   RO          743    i.taskFrame         task_frame.o
+    0x0001e424   0x0000000c   Code   RO          744    i.taskFrameInit     task_frame.o
+    0x0001e430   0x0000049c   Code   RO          605    i.taskGUI           task_gui.o
+    0x0001e8cc   0x0000001c   Code   RO          606    i.taskGUIInit       task_gui.o
+    0x0001e8e8   0x00000006   Code   RO          553    i.taskMotor         task_motor.o
+    0x0001e8ee   0x00000002   PAD
+    0x0001e8f0   0x00000048   Code   RO          554    i.taskMotorInit     task_motor.o
+    0x0001e938   0x000000b4   Code   RO          696    i.taskTouch         task_touch.o
+    0x0001e9ec   0x0000000c   Code   RO          697    i.taskTouchInit     task_touch.o
+    0x0001e9f8   0x0000016c   Code   RO         1196    i.win_main_proc     ui_win_main.o
+    0x0001eb64   0x00000044   Code   RO         1414    i.window_init       window.o
+    0x0001eba8   0x00000034   Code   RO         1415    i.window_pop        window.o
+    0x0001ebdc   0x0000001c   Code   RO         1416    i.window_push       window.o
+    0x0001ebf8   0x00000014   Data   RO          326    .constdata          osal_task.o
+    0x0001ec0c   0x00000ecf   Data   RO         1197    .constdata          ui_win_main.o
+    0x0001fadb   0x00000001   PAD
+    0x0001fadc   0x00000016   Data   RO         1421    .constdata          window.o
+    0x0001faf2   0x00000002   PAD
+    0x0001faf4   0x0000a948   Data   RO         1537    .constdata          ui_lib.o
+    0x0002a43c   0x00000020   Data   RO         1886    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20002080, Size: 0x0000a8a0, Max: 0x0000df80, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20002080   0x0000000a   Data   RW          232    .data               usersetting.o
+    0x2000208a   0x00000002   PAD
+    0x2000208c   0x00000004   Data   RW          250    .data               osal.o
+    0x20002090   0x0000000c   Data   RW          409    .data               osal_timer.o
+    0x2000209c   0x00000004   Data   RW          555    .data               task_motor.o
+    0x200020a0   0x00000031   Data   RW          608    .data               task_gui.o
+    0x200020d1   0x00000003   PAD
+    0x200020d4   0x0000000c   Data   RW          698    .data               task_touch.o
+    0x200020e0   0x00000004   Data   RW          745    .data               task_frame.o
+    0x200020e4   0x0000000c   Data   RW          818    .data               irqhandler.o
+    0x200020f0   0x00000001   Data   RW          987    .data               lcd_st7735.o
+    0x200020f1   0x00000003   PAD
+    0x200020f4   0x00000004   Data   RW         1101    .data               f_lib.o
+    0x200020f8   0x00000002   Data   RW         1198    .data               ui_win_main.o
+    0x200020fa   0x00000002   PAD
+    0x200020fc   0x00000024   Data   RW         1422    .data               window.o
+    0x20002120   0x00000004   Data   RW         1571    .data               system_nrf52.o
+    0x20002124   0x00000010   Zero   RW          325    .bss                osal_task.o
+    0x20002134   0x000003c0   Zero   RW          408    .bss                osal_timer.o
+    0x200024f4   0x00002018   Zero   RW          607    .bss                task_gui.o
+    0x2000450c   0x00006400   Zero   RW          986    .bss                lcd_st7735.o
+    0x2000a90c   0x00000010   Zero   RW         1420    .bss                window.o
+    0x2000a91c   0x00000004   PAD
+    0x2000a920   0x00002000   Zero   RW         1549    STACK               arm_startup_nrf52.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        36          8        512          0       8192        844   arm_startup_nrf52.o
+       168         34          0          0          0      30809   button.o
+         2          0          0          0          0        517   clocktick.o
+       674         64          0          4          0       7448   f_lib.o
+        28          4          0          0          0        845   fpu.o
+       136         22          0         12          0        915   irqhandler.o
+      1472         96          0          1      25600      12520   lcd_st7735.o
+        96         12          0          0          0      60982   main.o
+       144          0          0          0          0       1683   nrf_delay.o
+       248         26          0          4          0       3449   osal.o
+         4          0          0          0          0        476   osal_pwrmgr.o
+        56          6         20          0         16       1802   osal_task.o
+      1024         98          0         12        960      36056   osal_timer.o
+       188         16          0          0          0       5833   spi_hw.o
+      1320        134          0          4          0      33482   system_nrf52.o
+       210          6          0          4          0       1506   task_frame.o
+      1314         88          0         49       8216       9731   task_gui.o
+        94         14          0          4          0       5162   task_motor.o
+       212         30          0         12          0       5030   task_touch.o
+       224          6          0          0          0       1032   ui_draw.o
+         0          0      43336          0          0       1308   ui_lib.o
+      2284        106       3791          2          0       5054   ui_win_main.o
+         0          0          0         10          0       1093   usersetting.o
+       148         40         22         36         16       3600   window.o
+
+    ----------------------------------------------------------------------
+     10092        810      47716        164      43004     231177   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        10          0          3         10          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0         68   memcpya.o
+        36          0          0          0          0        108   memseta.o
+       492         16          0          0          0       1362   hfma2ylib.o
+
+    ----------------------------------------------------------------------
+       652         32          0          0          0       1606   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       158         16          0          0          0        244   mc_w.l
+       492         16          0          0          0       1362   nrf52832_xxaa.lib
+
+    ----------------------------------------------------------------------
+       652         32          0          0          0       1606   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     10744        842      47716        164      43004     224435   Grand Totals
+     10744        842      47716        164      43004     224435   ELF Image Totals
+     10744        842      47716        164          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                58460 (  57.09kB)
+    Total RW  Size (RW Data + ZI Data)             43168 (  42.16kB)
+    Total ROM Size (Code + RO Data + RW Data)      58624 (  57.25kB)
+
+==============================================================================
+
